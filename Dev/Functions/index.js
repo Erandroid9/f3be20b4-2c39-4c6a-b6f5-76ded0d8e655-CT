@@ -12,3 +12,31 @@ const AUTORUN=()=>{
     };
 
 };
+
+const CONDITION=(TERM,CALLBACK,CALLBACKTWO)=>{
+
+    if (TERM) {
+
+        CALLBACK();
+        
+    } else {
+
+        CALLBACKTWO();
+        
+    };
+
+};
+
+const DISPLAY=(ELEMENT,DATA)=>{
+
+    CONDITION(ELEMENT,()=>{
+
+        ELEMENT.innerHTML=DATA;
+
+    },()=>{
+
+        BODY.innerHTML=DATA;
+
+    });
+    
+};
