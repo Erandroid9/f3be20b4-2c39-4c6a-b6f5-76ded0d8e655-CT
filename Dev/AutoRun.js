@@ -22,6 +22,8 @@ ROUTEJS(localStorage.getItem("TemplatePlugins"));
 ROUTEJS(localStorage.getItem("TemplateJs"));
 ROUTECSS(localStorage.getItem("TemplateCss"));
 
+ROUTEJS(localStorage.getItem("ASSETS"));
+
 if (localStorage.getItem("Env") === "Web" ) {
 
     ROUTEJS(localStorage.getItem("Web"));
