@@ -49,9 +49,29 @@ h6{
     margin: auto;
 }
 
+p{
+    position: relative;
+    margin: auto;
+}
+
 header{
     position: absolute;
     width: 100%;
     height: 50px;
     background: #333333;
+    display: inline-flex;
+    margin: auto;
+    left: 0;
+    top: 0;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #333333;
+    display: inline-flex;
+    margin: auto;
+    left: 0;
+    bottom: 0;
 }
