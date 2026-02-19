@@ -32,7 +32,7 @@ if (localStorage.getItem("Env") === "Web" ) {
     ROUTEJS(localStorage.getItem("WebThree"));
     ROUTECSS(localStorage.getItem("WebFour"));
 
-    ROUTECSS(localStorage.getItem("WebJavascript"));
+    ROUTEJS(localStorage.getItem("WebJavascript"));
     
 } else {
 
@@ -44,7 +44,7 @@ if (localStorage.getItem("Env") === "Web" ) {
         ROUTEJS(localStorage.getItem("AndroidThree"));
         ROUTECSS(localStorage.getItem("AndroidFour"));
 
-        ROUTECSS(localStorage.getItem("AndroidJavascript"));
+        ROUTEJS(localStorage.getItem("AndroidJavascript"));
         
     } else {
 
@@ -54,10 +54,8 @@ if (localStorage.getItem("Env") === "Web" ) {
         ROUTEJS(localStorage.getItem("DesktopThree"));
         ROUTECSS(localStorage.getItem("DesktopFour"));
 
-        ROUTECSS(localStorage.getItem("DesktopJavascript"));
+        ROUTEJS(localStorage.getItem("DesktopJavascript"));
         
     };
     
 };
-
-AUTORUN();
