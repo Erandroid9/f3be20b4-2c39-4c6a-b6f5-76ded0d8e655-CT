@@ -11,6 +11,8 @@ const ERANDES=()=>{
         <footer>
 
             <h1>Working</h1>
+
+            <img src="${WHITE}"/>
         
         </footer>
  
