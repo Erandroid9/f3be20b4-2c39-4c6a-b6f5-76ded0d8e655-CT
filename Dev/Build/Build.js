@@ -14,10 +14,10 @@ const ERANDES=()=>{
 
             <img class="Icon" src="${WHITEHOMEICON}"/>
 
-            <p>Wow</p>
+            <p> test Wow</p>
         
         </footer>
  
     `);
 
-}
+};
