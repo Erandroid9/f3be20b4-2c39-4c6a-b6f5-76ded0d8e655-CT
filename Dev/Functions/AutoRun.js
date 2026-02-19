@@ -23,6 +23,7 @@ ROUTEJS(localStorage.getItem("TemplateJs"));
 ROUTECSS(localStorage.getItem("TemplateCss"));
 
 ROUTEJS(localStorage.getItem("Constants"));
+ROUTEJS(localStorage.getItem("Links"));
 
 ROUTEJS(localStorage.getItem("ASSETS"));
 
