@@ -13,6 +13,8 @@ const ERANDES=()=>{
             <h1>Working</h1>
 
             <img class="Icon" src="${WHITEHOMEICON}"/>
+
+            <p>Wow</p>
         
         </footer>
  
