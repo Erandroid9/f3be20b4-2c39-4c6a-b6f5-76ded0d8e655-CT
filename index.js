@@ -53,6 +53,7 @@ const PRODUCTIONMODE=()=>{
                 localStorage.setItem("IdStyles",User.IdStyles);
                 localStorage.setItem("SharedStyles",User.SharedStyles);
                 localStorage.setItem("Links",User.Links);
+                localStorage.setItem("Constants",User.Constants);
                 localStorage.setItem("ERANDCONFIG",User.AutoRun);
                 localStorage.setItem("ElementJavascript",User.ElementJavascript);
                 localStorage.setItem("ComponentsJavascript",User.ComponentsJavascript);
@@ -64,6 +65,7 @@ const PRODUCTIONMODE=()=>{
                 localStorage.setItem("TemplatePlugins",User.TemplatePlugins);
                 localStorage.setItem("TemplateCss",User.TemplatePlugins);
                 localStorage.setItem("TemplateJs",User.TemplatePlugins);
+          
 
                 if (localStorage.getItem("Env") === "Web" ) {
 
