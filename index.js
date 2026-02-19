@@ -87,7 +87,19 @@ const PRODUCTIONMODE=()=>{
                 
             } else {
 
-                console.log(User);
+                const Body=document.querySelector("body");
+
+                Body.innerHTML=`
+
+                    <h1 id="OffLineHeading">ERROR</h1>
+
+                    <h1>Failed to Get Response From Server</h1>
+
+                    <button id="">Retry</button>
+
+                    <button id="">Contact Admin</button>
+                
+                `;
                 
             };
 
