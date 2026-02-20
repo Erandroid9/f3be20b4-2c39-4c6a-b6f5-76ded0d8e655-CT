@@ -119,3 +119,7 @@ const ROUTE = (NEWPAGE, FUNCTION, FUNCTIONBACK) => {
     });
   
 };
+
+const VIEWCONTROLLER=()=>{
+
+};
