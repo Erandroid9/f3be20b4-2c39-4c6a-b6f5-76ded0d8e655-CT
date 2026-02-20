@@ -8,6 +8,7 @@ import { BLACKNEXTICON } from "../DataBase/BlackIcons/Next/Next.js";
 import { BLACKPHONEICON } from "../DataBase/BlackIcons/Phone/Phone.js";
 import { BLACKRETRYICON } from "../DataBase/BlackIcons/RetryIcon/RetryIcon.js";
 import { BLACKSENDICON } from "../DataBase/BlackIcons/Send/Send.js";
+import { BLACKSHOPPINGCART } from "../DataBase/BlackIcons/ShoppingCart/Shoppingcart.js";
 import { BLACKSUNICON } from "../DataBase/BlackIcons/Sun/Sun.js";
 import { BLACKUSERICON } from "../DataBase/BlackIcons/User/User.js";
 import { BLACKWHATSAPPICON } from "../DataBase/BlackIcons/WhatsApp/WhatsApp.js";
@@ -264,10 +265,11 @@ const BLACKMOONICON="${BLACKMOONICON}";
 const BLACKSENDICON="${BLACKSENDICON}";
 const BLACKNEXTICON="${BLACKNEXTICON}";
 const BLACKUSERICON="${BLACKUSERICON}";
+const BLACKSHOPPINGCART="${BLACKSHOPPINGCART}";
 `; 
 localStorage.setItem('ASSETS',DATA);
 };
 
 `
-const BLACKUSERICON="${BLACKUSERICON}";
+const BLACKSHOPPINGCART="${BLACKSHOPPINGCART}";
 `
