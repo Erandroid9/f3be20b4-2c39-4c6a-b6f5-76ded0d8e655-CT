@@ -14,6 +14,16 @@ const ADD=(ELEMENT,ELE)=>{
 const APPMODE=()=>{
 
     STYLED("body","background",localStorage.getItem("AppMode"));
+
+    CONDITION(localStorage.getItem("AppMode") === "#FFFFFF",()=>{
+            
+        STYLED("body","color","black");
+
+    },()=>{
+
+        STYLED("body","color","white");
+
+    });
     
 };
 
