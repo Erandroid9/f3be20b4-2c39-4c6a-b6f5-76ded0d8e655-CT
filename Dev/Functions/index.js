@@ -122,4 +122,16 @@ const ROUTE = (NEWPAGE, FUNCTION, FUNCTIONBACK) => {
 
 const VIEWCONTROLLER=()=>{
 
+    const screenWidth = window.screen.width;
+
+    CONDITION(screenWidth >=800,()=>{
+
+        DESKTOPVIEW();
+
+    },()=>{
+
+        MOBILEVIEW();
+
+    });
+
 };
