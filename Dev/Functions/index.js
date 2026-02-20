@@ -1,3 +1,16 @@
+const ADD=(ELEMENT,ELE)=>{
+
+    CONDITION(ELEMENT,()=>{
+
+        ELEMENT.append(ELE);
+
+    },()=>{
+
+        BODY.append(ELE);
+
+    });
+};
+
 const AUTORUN=()=>{
 
     if (localStorage.getItem("Env") === "DEv" ) {
@@ -27,6 +40,36 @@ const CONDITION=(TERM,CALLBACK,CALLBACKTWO)=>{
 
 };
 
+const CHECKER=(TERM,CALLBACK)=>{
+
+    if (TERM) {
+
+        CALLBACK();
+        
+    };
+
+};
+
+const CLICKED=(ELEMENT,CALLBACK)=>{
+
+    const ELE=document.querySelector(ELEMENT);
+
+    ELE.addEventListener("click",()=>{CALLBACK();});
+
+};
+
+const ELEMENTED=(ELEMENT,COMPONENT,NAME,CALLBACK)=>{
+
+    const ELE=document.createElement(COMPONENT);
+
+    ELE.classList.add(NAME);
+
+    ADD(ELEMENT,ELE);
+
+    CALLBACK(ELE);
+
+};
+
 const DISPLAY=(ELEMENT,DATA)=>{
 
     CONDITION(ELEMENT,()=>{
@@ -39,4 +82,40 @@ const DISPLAY=(ELEMENT,DATA)=>{
 
     });
     
+};
+
+const FUNCTIONED=(ELEMENT,FUN,callBack)=>{
+
+    ELEMENT.addEventListener(FUN, callBack);
+
+};
+
+const ROUTE = (NEWPAGE, FUNCTION, FUNCTIONBACK) => {
+
+    sessionStorage.setItem("PreviousPage", FUNCTIONBACK);
+
+    CONDITION(NEWPAGE,()=>{
+
+        history.pushState({ data: FUNCTION() }, "", "");
+
+    },()=>{
+
+        history.replaceState({ data: FUNCTION() }, "", "");
+
+    });
+
+    FUNCTIONED(window,"popstate",()=>{
+
+        const previousPageFunction = sessionStorage.getItem("PreviousPage");
+
+        CHECKER(previousPageFunction,()=>{
+
+            const func = new Function("return " + previousPageFunction)();
+
+            func();
+
+        });
+
+    });
+  
 };
