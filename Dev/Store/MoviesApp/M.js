@@ -45,6 +45,8 @@ const MOBILEHOMEPAGE=()=>{
 
     ICONMODE("#Account",WHITEUSERICON,BLACKUSERICON);
 
+    NEXTPAGECLICK("#Account",MOBILEUSERACCOUNT,MOBILEHOMEPAGE);
+
 };
 
 const MOBILELOGINPAGE=()=>{
@@ -186,6 +188,26 @@ const MOBILEEMAILPAGE=()=>{
         ROUTE("",MOBILECREATEACCOUNTPAGE,"MOBILECREATEACCOUNTPAGE");
 
     });
+
+};
+
+const MOBILEUSERACCOUNT=()=>{
+
+    DISPLAY("",`
+
+        <header>
+
+            <img id="BackIcon" class="LeftIcon">
+
+            <p class="RightText">Profile</p>
+        
+        </header>
+        
+    `);
+
+    ICONMODE("#BackIcon",WHITEBACKICON,BLACKBACKICON);
+
+    BACKPAGECLICK("#BackIcon",MOBILEHOMEPAGE);
 
 };
 

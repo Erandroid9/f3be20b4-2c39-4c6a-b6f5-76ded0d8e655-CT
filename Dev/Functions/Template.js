@@ -35,3 +35,23 @@ const LOGINCHECKER=(CALLBACK,CALLBACKONE,CALLBACKTWO)=>{
     });
 
 };
+
+const BACKPAGECLICK=(ELE,NAME)=>{
+
+    CLICKED(ELE,()=>{
+
+        ROUTE("",NAME,`${NAME}`);
+
+    });
+
+};
+
+const NEXTPAGECLICK=(ELE,NAMETWO,NAME)=>{
+
+    CLICKED(ELE,()=>{
+
+        ROUTE("",NAMETWO,`${NAME}`);
+
+    });
+
+};
