@@ -50,7 +50,7 @@ const NEXTPAGECLICK=(ELE,NAMETWO,NAME)=>{
 
     CLICKED(ELE,()=>{
 
-        ROUTE("",NAMETWO,`${NAME}`);
+        ROUTE(" ",NAMETWO,`${NAME}`);
 
     });
 

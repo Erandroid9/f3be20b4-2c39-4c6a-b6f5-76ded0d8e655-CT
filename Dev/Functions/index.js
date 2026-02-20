@@ -15,7 +15,7 @@ const APPMODE=()=>{
 
     STYLED("body","background",localStorage.getItem("AppMode"));
 
-    CONDITION(localStorage.getItem("AppMode") === "#FFFFFF",()=>{
+    CONDITION(localStorage.getItem("AppMode") === "#FFFFFF"||!localStorage.getItem("AppMode"),()=>{
             
         STYLED("body","color","black");
 
