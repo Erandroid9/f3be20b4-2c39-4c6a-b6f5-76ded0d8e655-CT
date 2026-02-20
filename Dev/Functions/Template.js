@@ -13,3 +13,25 @@ const ICONMODE=(ELEMENT,LIGHTMODE,DARKMODE)=>{
     });
 
 };
+
+const LOGINCHECKER=(CALLBACK,CALLBACKONE,CALLBACKTWO)=>{
+
+    CONDITION(localStorage.getItem("User"),()=>{
+
+        CALLBACK();
+
+    },()=>{
+
+        CONDITION(localStorage.getItem("UserCode"),()=>{
+
+            CALLBACKONE();
+
+        },()=>{
+
+            CALLBACKTWO();
+                
+        });
+   
+    });
+
+};
