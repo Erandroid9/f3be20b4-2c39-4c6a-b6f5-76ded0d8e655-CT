@@ -1,3 +1,9 @@
+ROUTEJS(localStorage.getItem("ASSETS"));
+
+ROUTEJS(localStorage.getItem("Constants"));
+
+ROUTEJS(localStorage.getItem("Links"));
+
 ROUTEJS(localStorage.getItem("ElementJavascript"));
 ROUTEJS(localStorage.getItem("ComponentsJavascript"));
 ROUTEJS(localStorage.getItem("ClassesJavascript"));
@@ -22,10 +28,6 @@ ROUTEJS(localStorage.getItem("TemplatePlugins"));
 ROUTEJS(localStorage.getItem("TemplateJs"));
 ROUTECSS(localStorage.getItem("TemplateCss"));
 
-ROUTEJS(localStorage.getItem("Constants"));
-ROUTEJS(localStorage.getItem("Links"));
-
-ROUTEJS(localStorage.getItem("ASSETS"));
 
 if (localStorage.getItem("Env") === "Web" ) {
 

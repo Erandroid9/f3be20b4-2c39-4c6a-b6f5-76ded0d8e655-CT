@@ -2,3 +2,21 @@
     width: 20px;
     height: 20px;
 }
+
+.LeftText{
+    text-align: left;
+    margin-left: 2%;
+}
+
+.LeftIcon{
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+}
+
+
+.RightIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 2%;
+}

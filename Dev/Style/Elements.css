@@ -58,7 +58,7 @@ header{
     position: absolute;
     width: 100%;
     height: 50px;
-    background: #333333;
+    background: #33333350;
     display: inline-flex;
     margin: auto;
     left: 0;
@@ -69,7 +69,7 @@ footer{
     position: absolute;
     width: 100%;
     height: 50px;
-    background: #333333;
+    background: #33333350;
     display: inline-flex;
     margin: auto;
     left: 0;

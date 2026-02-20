@@ -63,8 +63,8 @@ const PRODUCTIONMODE=()=>{
                 localStorage.setItem("PlugInJavascript",User.PlugInJavascript);
                 localStorage.setItem("TemplatePages",User.TemplatePages);
                 localStorage.setItem("TemplatePlugins",User.TemplatePlugins);
-                localStorage.setItem("TemplateCss",User.TemplatePlugins);
-                localStorage.setItem("TemplateJs",User.TemplatePlugins);
+                localStorage.setItem("TemplateCss",User.TemplateCss);
+                localStorage.setItem("TemplateJs",User.TemplateJs);
           
 
                 if (localStorage.getItem("Env") === "Web" ) {

@@ -11,6 +11,12 @@ const ADD=(ELEMENT,ELE)=>{
     });
 };
 
+const APPMODE=()=>{
+
+    STYLED("body","background",localStorage.getItem("AppMode"));
+    
+};
+
 const AUTORUN=()=>{
 
     if (localStorage.getItem("Env") === "DEv" ) {
@@ -122,6 +128,8 @@ const ROUTE = (NEWPAGE, FUNCTION, FUNCTIONBACK) => {
 
 const VIEWCONTROLLER=()=>{
 
+    APPMODE();
+
     const screenWidth = window.screen.width;
 
     CONDITION(screenWidth >=800,()=>{
@@ -131,6 +139,42 @@ const VIEWCONTROLLER=()=>{
     },()=>{
 
         MOBILEVIEW();
+
+    });
+
+};
+
+const STYLED=(ELEMENT,PROPERTY,VALUE)=>{
+
+    const ELE=document.querySelector(ELEMENT);
+
+    ELE.style[PROPERTY]=VALUE;
+
+};
+
+const LOCALSTORE=(NAME,VALUE)=>{
+
+    localStorage.setItem(NAME,VALUE)
+
+};
+
+const MODECHANGE=(ELEMENT)=>{
+
+    CLICKED(ELEMENT,()=>{
+
+        CONDITION(localStorage.getItem("AppMode") === "#FFFFFF",()=>{
+            
+            LOCALSTORE("AppMode","#000000");
+
+            ERANDES();
+
+        },()=>{
+
+            LOCALSTORE("AppMode","#FFFFFF");
+
+            ERANDES();
+
+        });
 
     });
 
