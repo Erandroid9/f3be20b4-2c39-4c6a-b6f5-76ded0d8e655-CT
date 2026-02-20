@@ -6,11 +6,6 @@ const ERANDES=()=>{
 
 const MOBILEVIEW=()=>{
 
-    DISPLAY("",`
-
-        <h1>Working</h1>
-        
-    `);
 
 };
 
