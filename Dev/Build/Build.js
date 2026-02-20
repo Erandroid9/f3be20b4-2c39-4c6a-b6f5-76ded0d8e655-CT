@@ -18,6 +18,8 @@ const MOBILEVIEW=()=>{
 
         </header>
 
+        <div class="DataHolder"></div>
+
     `);
 
     ICONMODE("#ModeIcon",WHITESUNICON,BLACKSUNICON);
