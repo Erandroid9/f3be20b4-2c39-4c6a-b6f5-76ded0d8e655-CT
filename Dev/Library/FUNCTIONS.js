@@ -1278,7 +1278,7 @@ const SERVERCOMPONENTS=(PATH,CALLBACK)=>{
 
     CONDITION(localStorage.getItem("Env") === "Dev",()=>{
 
-        CALLBACK("../Library/Assets/DataBase/Raw/"+PATH);
+        CALLBACK("../Assets/DataBase/Raw/"+PATH);
 
     },()=>{
 
@@ -1310,7 +1310,7 @@ const SERVERASSETS=(PATH,CALLBACK)=>{
 
     if(localStorage.getItem("Env") === "Dev"){
 
-        CALLBACK("../Library/Assets/DataBase/Raw/"+PATH);
+        CALLBACK("../Assets/DataBase/Raw/"+PATH);
 
     }else{
 
