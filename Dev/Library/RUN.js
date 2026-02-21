@@ -1,4 +1,3 @@
-AUTORUN();
 BODIED();
 WEBKIT();
 ZOOM();
