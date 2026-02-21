@@ -1,0 +1,225 @@
+const POSITIONFIXED=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"position","fixed");
+
+};
+const RADIUS=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"border-radius",AMOUNT||"20px");
+
+};
+const MARGIN=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"margin",AMOUNT||"auto");
+
+};
+const POSITIONRELATIVE=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"position","relative");
+
+};
+const DISPLAYFLEX=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"display","inline-flex");
+
+};
+const TOP=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"top",AMOUNT||"0px");
+
+};
+const WIDTH=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"width",AMOUNT||"100%");
+
+};
+const HEIGHT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"height",AMOUNT||"100%");
+
+};
+const LEFT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"left",AMOUNT||"0");
+
+};
+const BACKGROUND=(ELEMENT,COlOR)=>{
+
+    STYLED(ELEMENT,"background",COlOR||"#cdcdcd50");
+
+};
+const RIGHT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"right",AMOUNT||"0");
+
+};
+const MARGINLEFT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"margin-left",AMOUNT||"auto");
+
+};
+const MARGINRIGHT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"margin-right",AMOUNT||"auto");
+
+};
+const MARGINTOP=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"margin-top",AMOUNT||"auto");
+
+};
+const MARGINBOTTOM=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"margin-bottom",AMOUNT||"auto");
+
+};
+const PADDING=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"padding",AMOUNT||"auto");
+
+};
+const PADDINGRIGHT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"padding-right",AMOUNT||"auto");
+
+};
+const PADDINGLEFT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"padding-left",AMOUNT||"auto");
+
+};
+const PADDINGTOP=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"padding-top",AMOUNT||"auto");
+
+};
+const PADDINGBOTTOM=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"padding-bottom",AMOUNT||"auto");
+
+};
+const POSITIONABSOLUTE=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"position","absolute");
+
+};
+const DISPLAYBLOCK=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"display","block");
+
+};
+const DISPLAYTABLE=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"display","inline-table");
+
+};
+const DISPLAYHIDDEN=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"display","none");
+
+};
+const BORDER=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"border",`1px solid ${AMOUNT||"none"}`);
+
+};
+const BORDERTOP=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"border-top",`1px solid ${AMOUNT||"none"}`);
+
+};
+const BORDERBOTTOM=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"border-bottom",`1px solid ${AMOUNT||"none"}`);
+
+};
+const BORDERLEFT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"border-left",`1px solid ${AMOUNT||"none"}`);
+
+};
+const BORDERRIGHT=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"border-right",`1px solid ${AMOUNT||"none"}`);
+
+};
+const BOTTOM=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"bottom",AMOUNT||"0px");
+
+};
+const COLOR=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"color",AMOUNT||WHITE);
+
+};
+const FONTSIZE=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"font-size",AMOUNT||"20px");
+
+};
+const OUTLINE=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"outline","none");
+
+};
+const TEXTDECORATION=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"text-decoration","none");
+
+};
+const FONTFAMILY=(ELEMENT,AMOUNT)=>{
+
+    STYLED(ELEMENT,"font-family",AMOUNT||"sans-serif,Camberia");
+
+};
+const TEXTALIGN=(ELEMENT,ALIGN)=>{
+
+    STYLED(ELEMENT,"text-align",ALIGN||"center");
+    
+};
+const OVERFLOWHIDDEN=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"overflow","hidden");
+
+};
+const OVERFLOWY=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"overflowY","auto");
+
+};
+const OVERFLOWX=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"overflowX","auto");
+
+};
+const OVERFLOW=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"overflow","auto");
+
+};
+const LEFTTEXTALIGN=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"text-align","left");
+    
+};
+const RIGHTTEXTALIGN=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"text-align","right");
+    
+};
+const FLEXSHRINK=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"flex-shrink","0");
+
+};
+const COVEROBJECTFIT=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"object-fit","cover");
+
+};
+const NOBORDER=(ELEMENT)=>{
+
+    STYLED(ELEMENT,"border","none");
+
+};

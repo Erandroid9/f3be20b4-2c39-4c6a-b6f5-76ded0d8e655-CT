@@ -59,9 +59,61 @@ const CHECKER=(TERM,callback)=>{
     };
 
 };
+const BODIED=()=>{
+
+    SCREENWIDTH((Data)=>{
+
+        DATASTORE(" ","Width",Data);
+
+    });
+
+    POSITIONFIXED(BODY);
+    MARGIN(BODY,"0");
+    PADDING(BODY,"0");
+    WIDTH(BODY,"");
+    HEIGHT(BODY,"");
+    DISPLAYBLOCK(BODY);
+    OVERFLOWHIDDEN(BODY);
+    TEXTALIGN(BODY,"");
+    BORDER(BODY,"");
+    OUTLINE(BODY);
+    TEXTDECORATION(BODY);
+    FONTFAMILY(BODY,"");
+    FONTSIZE(BODY,"");
+
+    CLICK(BODY,()=>{
+
+        SCREENWIDTH((Data)=>{
+
+            CONDITION(Data != localStorage.getItem("Width"),()=>{
+
+                DATASTORE("Local","Width",Data);
+
+                RELOAD();  
+
+            },()=>{
+
+                DATASTORE("Local","Width",Data);
+
+            });
+
+        });
+
+    });
+
+};
 const STYLED=(ELEMENT,PROPERTY,VALUE)=>{
 
    ELEMENT.style[PROPERTY] = VALUE
+
+};
+const ELEMENTED=(HOLDER,ELEMENT,callBack)=>{
+
+    const ELEMENTS=document.createElement(ELEMENT);
+
+    ADD(HOLDER,ELEMENTS);
+
+    callBack(ELEMENTS);
 
 };
 const ROUTE=(NEWPAGE, FUNCTION, FUNCTIONBACK) => {
@@ -176,14 +228,29 @@ const FINDER=(DATA, ELEMENT, ELEMENT1, ACTION) => {
 };
 const CLICK=(ELEMENT,callback)=>{
 
-    const ELE=document.querySelector(ELEMENT);
-
-    FUNCTIONED(ELE,"click",callback);
+    FUNCTIONED(ELEMENT,"click",callback);
 
 };
 const CLEAR=(ELEMENT)=>{
 
     DISPLAY(ELEMENT,``);
+
+};
+const SWITCHER=(WIDTH, DesktopCallback, PhoneCallback) => {
+
+    SCREENWIDTH((Data)=>{
+
+        CONDITION(Data >= WIDTH || Data >= 800,()=>{
+
+            DesktopCallback();
+
+        },()=>{
+
+            PhoneCallback();
+
+        });
+
+    });
 
 };
 const DATASTORE=(Type,Name,data)=>{
@@ -218,7 +285,7 @@ const SCREENWIDTH=(callBack)=>{
 };
 const CLOUDPOST=(LINK,DATA,callBack)=>{
 
-    if (navigator.onLine) {
+    OFFLINECHECKER(()=>{
 
         fetch(LINK,{
             method:"POST",
@@ -239,14 +306,40 @@ const CLOUDPOST=(LINK,DATA,callBack)=>{
             console.log(error);
             
         });
-    };
-   
+
+    });
+    
 };
 const SCREENHEIGHT=(callBack)=>{
 
     const screenheight = window.screen.height;
 
     callBack(screenheight);
+
+};
+const SOURCED=(ELEMENT,SOURCE)=>{
+
+    ELEMENT.src=SOURCE||"#";
+
+};
+const CONTROLS=(ELEMENT)=>{
+
+    ELEMENT.controls=true;
+
+};
+const SOURCEREF=(ELEMENT,SOURCE)=>{
+
+    ELEMENT.href=SOURCE||"#";
+
+};
+const TYPE=(ELEMENT,TYPES)=>{
+
+    ELEMENT.type=TYPES;
+
+};
+const PLACEHOLDER=(ELEMENT,MESSAGE)=>{
+
+    ELEMENT.placeholder=MESSAGE||"Your Text";
 
 };
 const HIDER=(TIME,callback)=>{
@@ -621,6 +714,44 @@ const GETINDEXDATA=(dbName, storeName, callback) => {
     };
     
 };
+const FILEPICKER=(HOLDER, callback) => {
+
+  CLICK(HOLDER, () => {
+
+    const input = document.createElement("input");
+    input.type = "file";
+    input.style.display = "none";
+
+    input.onchange = () => {
+
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = () => {
+
+        const rawPath = input.value || file.name;
+
+        const path = rawPath.replace(/\\/g, "/");
+
+        callback({
+          name: file.name,
+          type: file.type,
+          size: file.size,
+          path: path,
+          data: reader.result
+        });
+
+      };
+
+      reader.readAsDataURL(file);
+    };
+
+    input.click();
+  });
+
+};
 const REDUX=(Data,callBack)=>{
 
     Data.forEach(element => {
@@ -642,6 +773,7 @@ const PATHREVERSE=(filePath,callBack)=>{
     if (typeof filePath !== "string") {
         throw new Error("Input must be a string");
     }
+
 
     const newPath = filePath.replace(/\\/g, "/");
 
@@ -680,6 +812,26 @@ const DOWNLOADFILE=async (url, filename) => {
     console.warn("No internet connection");
   }
 };
+const COPY=async (data) => {
+
+  try {
+
+    await navigator.clipboard.writeText(data);
+
+    TOASTVIEW("Copied to clipboard");
+
+  } catch (err) {
+
+    TOASTVIEW("Failed to copy:", err);
+
+  }
+  
+};
+const TEXTCHANGER=(ELEMENT,Data)=>{
+
+    ELEMENT.value=Data;
+
+};
 const DESPACEDWORDS=(input, callBack) => {
     const originalWord = input.split("%20").join(" ");
     callBack(originalWord);
@@ -687,6 +839,27 @@ const DESPACEDWORDS=(input, callBack) => {
 const CALL=(NUMBER)=>{
 
     window.location.href = "tel:"+NUMBER;
+
+};
+const CAPITALIZED=(text, callback)=>{
+
+    const capitalized = text.toUpperCase();
+
+    CHECKER(typeof text !== 'string',()=>{
+
+        TOAST("Input must be a string");
+
+    });
+
+    CONDITION(typeof callback === 'function',()=>{
+
+        callback(capitalized);
+
+    },()=>{
+
+        TOAST("Callback is not a function");
+
+    });
 
 };
 const DATENOW=(callback) => {
@@ -803,6 +976,13 @@ const GROUP=(data, callback) => {
 
   callback(finalArray);
   
+};
+const HOVER=(ELEMENT, onEnter, onLeave) => {
+
+    ELEMENT.addEventListener("mouseenter", () => onEnter(ELEMENT));
+
+    ELEMENT.addEventListener("mouseleave", () => onLeave(ELEMENT));
+    
 };
 const INSTAGRAM=(NAME) => {
    
@@ -1010,6 +1190,33 @@ const OPERATINGSYSTEM=() => {
 
     return deviceData;
 };
+const POWEREDBY=(ELEMENT,COLOR)=>{
+
+    const NAMES=document.createElement("p");
+
+    DISPLAY(NAMES,COMPANYNAME);
+
+    STYLED(NAMES,"text-align","center");
+    STYLED(NAMES,"color",COLOR||"#FFFFFF");
+
+    CLICK(NAMES,()=>{
+
+        WEBSITE(COMPANYLINK);
+
+    });
+
+    ADD(ELEMENT,NAMES);
+
+};
+const SCROLL=(ELEMENT, callback) => {
+
+    ELEMENT.addEventListener("scroll", () => {
+
+        callback();
+
+    });
+    
+};
 const SMS=(NUMBER) => {
 
     const phoneNumber = NUMBER;
@@ -1069,6 +1276,19 @@ const WHATSAPP=(NUMBER)=>{
     location.href=`https://wa.me/${NUMBER}`;
 
 };
+const SERVERCOMPONENTS=(PATH,CALLBACK)=>{
+
+    CONDITION(localStorage.getItem("Env") === "Dev",()=>{
+
+        CALLBACK("../Library/Assets/DataBase/Raw/"+PATH);
+
+    },()=>{
+
+        CALLBACK("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-E/Library/Assets/DataBase/Raw/"+PATH);
+
+    });
+
+};
 const DELETEDATASTORE=(Type,Name,data)=>{
 
     CONDITION(Type,()=>{
@@ -1087,6 +1307,19 @@ const RANDOMCODEGENERATOR=(callback) => {
   if (typeof callback === "function") {
     callback(code);
   }
+};
+const SERVERASSETS=(PATH,CALLBACK)=>{
+
+    if(localStorage.getItem("Env") === "Dev"){
+
+        CALLBACK("../Library/Assets/DataBase/Raw/"+PATH);
+
+    }else{
+
+        CALLBACK("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-E/Library/Assets/DataBase/Raw/"+PATH);
+
+    };
+
 };
 const GETEMAILS=(callBack)=>{
 
@@ -1122,7 +1355,6 @@ const ARRAYJSONCONVERTOR=(DATA, CALLBACK) => {
       return;
     }
     const parsedData = typeof DATA === "string" ? JSON.parse(DATA) : DATA;
-
     if (!Array.isArray(parsedData)) {
       CALLBACK([]);
       return;
@@ -1163,45 +1395,4 @@ const TIMEZONE=() => {
   } catch (error) {
     console.error("Timezone detection failed:", error);
   }
-};
-const BASE64CONVERTOR=async (dataUrl, callBack) => {
-  const MAX_LENGTH = 50000;
-
-  if (!dataUrl.startsWith("data:image")) {
-    throw new Error("Only images are supported without ffmpeg.wasm");
-  }
-
-  const img = new Image();
-  img.src = dataUrl;
-
-  await new Promise((res) => (img.onload = res));
-
-  let canvas = document.createElement("canvas");
-  let ctx = canvas.getContext("2d");
-
-  let width = img.width;
-  let height = img.height;
-
-  let quality = 0.9;
-  let output = dataUrl;
-
-  while (output.length > MAX_LENGTH && quality > 0.1) {
-    width *= 0.9;
-    height *= 0.9;
-
-    canvas.width = width;
-    canvas.height = height;
-
-    ctx.clearRect(0, 0, width, height);
-    ctx.drawImage(img, 0, 0, width, height);
-
-    output = canvas.toDataURL("image/jpeg", quality);
-    quality -= 0.05;
-  }
-
-  if (output.length > MAX_LENGTH) {
-    throw new Error("Cannot compress image below 50,000 chars without heavy loss");
-  }
-
-  callBack(output);
 };

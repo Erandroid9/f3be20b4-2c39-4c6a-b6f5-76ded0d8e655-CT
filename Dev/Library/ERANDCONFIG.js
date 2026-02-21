@@ -1,0 +1,12 @@
+ROUTEJS(localStorage.getItem("FUNCTIONS"));
+ROUTEJS(localStorage.getItem("STYLES"));
+ROUTEJS(localStorage.getItem("CONSTANTS"));
+ROUTEJS(localStorage.getItem("ASSETS"));
+ROUTEJS(localStorage.getItem("PAGES"));
+ROUTEJS(localStorage.getItem("COLORS"));
+ROUTEJS(localStorage.getItem("COMPONENTS"));
+ROUTEJS(localStorage.getItem("SERVER"));
+ROUTEJS(localStorage.getItem("APIS"));
+ROUTEJS(localStorage.getItem("TEMPLATES"));
+ROUTEJS(localStorage.getItem("RUN"));
+ROUTEJS(localStorage.getItem("PROJECT"));

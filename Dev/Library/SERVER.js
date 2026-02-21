@@ -1,0 +1,360 @@
+const CREATEACCOUNTSERVER=(LINK)=>{
+
+    GETDATA(LINK,"Users",(Data)=>{
+
+        TOASTVIEW("Please Wait,Fetching User Data?");
+
+        FINDER(Data,"UserEmail",sessionStorage.getItem("UserEmail"),(User)=>{
+
+            CONDITION(User.UserEmail === sessionStorage.getItem("UserEmail"),()=>{
+
+                TOASTVIEW("User With Account Found!");
+             
+            },()=>{
+
+                const MESSAGE=`Dear ${sessionStorage.getItem("UserName")};\n Please Complete Your Account Creation With The Code Below\n ===>${localStorage.getItem("UserCodes")}.\n If Your The One Who Created The Account Please Open Respective Point and Add That Code,\n\n If your Not the one Who Requested for Account to be Opened,Please Ignore This Mail.\n Thank You.`
+    
+                EMAILSERVER(sessionStorage.getItem("UserEmail"),"Account Creation",MESSAGE,()=>{
+
+                    DEVICE((Data)=>{
+
+                        const HEADERS=["UserName","UserEmail","UserPassword","Device","Date","Approved","Location","UserProfile","UserActivity","UserVisits","UserLanguage","UserDevice","UserNumber","UserCode","UserLinks","Confirmed"];
+        
+                        const INFO=[sessionStorage.getItem("UserName"),sessionStorage.getItem("UserEmail"),sessionStorage.getItem("UserPassword"),Data,new Date(),"Approved","","",`[${new Date()}]`,1,Data.language,localStorage.getItem("VisitorID")||"","",localStorage.getItem("UserCodes"),`[]`,""];
+            
+                        INSERTDATA(LINK,"Users",HEADERS,INFO,(data)=>{
+
+                            DATASTORE(" ","UserID",data.uniqueId);
+                            
+                            RELOAD();
+
+                        });
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    });
+
+};
+const FORGOTPASSWORDSERVER=(LINK)=>{
+
+    GETDATA(LINK,"Users",(Data)=>{
+
+        TOASTVIEW("Please Wait,Fetching User Data?");
+
+        FINDER(Data,"UserEmail",sessionStorage.getItem("UserEmail"),(User)=>{
+
+            CONDITION(User.UserEmail === sessionStorage.getItem("UserEmail"),()=>{
+
+                CONDITION(User.Approved,()=>{
+
+                    const MESSAGE=`Dear ${User.UserName};\n Your Account Password Is Below\n ===>${User.UserPassword}.\n If Your The One Who Tried to Access Your Account Please Open Respective Point and Don't Share Your Password,\n\n If your Not the one Who Requested for Account to be Opened,Please Ignore This Mail.\n Thank You.`
+        
+                    EMAILSERVER(sessionStorage.getItem("UserEmail"),"Account Recovery",MESSAGE,()=>{
+    
+                        TOASTVIEW("Please Check Your Email For More Instructions");
+    
+                        HIDER(3000,()=>{
+    
+                            RELOAD();
+    
+                        });
+    
+                    });
+
+                },()=>{
+
+                    TOASTVIEW("Something Went Wrong,Try Again Later!");
+
+                });
+                
+            },()=>{
+
+                TOASTVIEW("Account Not Found!!!");
+
+            });
+
+        });
+
+    });
+
+};
+const LOGINSERVER=(LINK)=>{
+
+    GETDATA(LINK,"Users",(Data)=>{
+
+        TOASTVIEW("Please Wait,Fetching User Data?");
+
+        FINDER(Data,"UserEmail",sessionStorage.getItem("UserEmail"),(User)=>{
+
+            CONDITION(User.UserEmail === sessionStorage.getItem("UserEmail"),()=>{
+
+                CONDITION(User.UserPassword === sessionStorage.getItem("UserPassword"),()=>{
+
+                    CONDITION(User.Approved,()=>{
+
+                        DATASTORE(" ","User",User.ID);
+
+                        RELOAD();
+
+                    },()=>{
+
+                        TOASTVIEW("Something Went Wrong,Try Again Later!");
+
+                    });
+
+                },()=>{
+
+                    TOASTVIEW("Incorrect Password");
+
+                });
+
+            },()=>{
+
+                TOASTVIEW("No User Account Found!");
+
+            });
+
+        });
+
+    });
+
+};
+const OFFLINESERVER=()=>{
+
+};
+const EMAILSERVER=(EMAIL,SUBJECT,MESSAGE,callBack)=>{
+
+    const DATA={
+        "recipientEmail":EMAIL,
+        "subject":SUBJECT,
+        "body":MESSAGE
+    };
+
+    CLOUDPOST(EMAILLINK,DATA,(Data)=>{
+
+        CONDITION(Data.status === "success",()=>{
+
+            callBack(Data);
+
+        },()=>{
+
+            TOASTVIEW("Invalid Email Provided");
+
+        });
+
+    });
+
+};
+const ERANDIXNEWPROJECT=()=>{
+
+    TOASTVIEW("Please Wait");
+
+    const HEADERS=["Name","Android","Desktop","Web","Date","AdminEmail","Approved","ProjectImage","ProjectExpiry","Domain"];
+
+    const INFO=[sessionStorage.getItem("ProjectName"),sessionStorage.getItem("ProjectAndroid"),sessionStorage.getItem("ProjectDesktop"),sessionStorage.getItem("ProjectWeb"),new Date(),sessionStorage.getItem("ProjectEmail"),"Approved",sessionStorage.getItem("ProjectImage"),"",sessionStorage.getItem("ProjectDomain")];
+                    
+    INSERTDATA(ERANDIXMANAGERLINK,"Production",HEADERS,INFO,(DataS)=>{
+                    
+        TOASTVIEW("Project Created Successfully");
+
+        HIDER(2000,()=>{
+
+            RELOAD();
+
+        });
+       
+    });
+
+};
+const ERANDIXUPDATEPROJECT=(Data,ID)=>{
+
+    TOASTVIEW("Please Wait");
+
+    GETDATA(ERANDIXMANAGERLINK,"Production",(Datata)=>{
+
+        TOASTVIEW("Please Wait,Fetching Project Data");
+
+        FINDER(Datata,"ID",ID,(User)=>{
+
+            CONDITION(User.ID ===ID,()=>{
+
+                TOASTCONDITION(User.Approved,"Something Went Wrong",()=>{
+
+                    const INFO=[sessionStorage.getItem("ProjectName")||Data.Name,sessionStorage.getItem("ProjectAndroid")||Data.Android,sessionStorage.getItem("ProjectDesktop")||Data.Desktop,sessionStorage.getItem("ProjectWeb")||Data.Web,Data.Date,sessionStorage.getItem("ProjectEmail")||Data.AdminEmail,Data.Approved,sessionStorage.getItem("ProjectImage")||Data.ProjectImage,Data.ProjectExpiry,sessionStorage.getItem("ProjectDomain")||Data.Domain];
+                                
+                    UPDATEDATA(ERANDIXMANAGERLINK,"Production",ID,INFO,(DataS)=>{
+                                    
+                        TOASTVIEW("Project Updated Successfully");
+
+                        HIDER(2000,()=>{
+
+                            RELOAD();
+
+                        });
+                    
+                    });
+
+                });
+                
+            },()=>{
+
+                TOASTVIEW("Failed To Update Project");
+
+            });
+
+        });
+
+    });
+
+};
+const DELETEACCOUNTSERVER=()=>{
+
+    GETDATA(LINK,"Users",(Data)=>{
+
+        TOASTVIEW("Please Wait,Fetching User Data?");
+
+        FINDER(Data,"ID",localStorage.getItem("UserID"),(User)=>{
+
+            CONDITION(User.ID === localStorage.getItem("UserID"),()=>{
+
+                CONDITION(User.Approved,()=>{
+
+                    DATASTORE(" ","User",localStorage.getItem("UserID"));
+    
+                    const INFO=[User.UserName,User.UserEmail,User.UserPassword,User.Device,User.Date,User.Approved,User.Location,User.UserProfile,User.UserActivity,User.UserVisits+1,User.UserLanguage,localStorage.getItem("VisitorID")||"",User.UserNumber,User.UserCode,User.UserLinks,"Confirmed"];
+            
+                    UPDATEDATA(LINK,"Users",localStorage.getItem("UserID"),INFO,(data)=>{
+    
+                        DELETEDATASTORE(" ","UserID");
+    
+                        DELETEDATASTORE(" ","UserCodes");
+                                 
+                        RELOAD();
+    
+                    });
+
+                },()=>{
+
+                    TOASTVIEW("Something Went Wrong,Try Again Later!");
+
+                });
+
+            },()=>{
+
+                TOASTVIEW("Failed To Validate User Account");
+
+            });
+
+        });
+
+    });
+
+};
+const EMAILVERIFICATIONSERVER=(LINK)=>{
+
+    GETDATA(LINK,"Users",(Data)=>{
+
+        TOASTVIEW("Please Wait,Fetching User Data?");
+
+        FINDER(Data,"ID",localStorage.getItem("UserID"),(User)=>{
+
+            CONDITION(User.ID === localStorage.getItem("UserID"),()=>{
+
+                CONDITION(User.Approved,()=>{
+
+                    DATASTORE(" ","User",localStorage.getItem("UserID"));
+    
+                    const INFO=[User.UserName,User.UserEmail,User.UserPassword,User.Device,User.Date,User.Approved,User.Location,User.UserProfile,User.UserActivity,User.UserVisits+1,User.UserLanguage,localStorage.getItem("VisitorID")||"",User.UserNumber,User.UserCode,User.UserLinks,"Confirmed"];
+            
+                    UPDATEDATA(LINK,"Users",localStorage.getItem("UserID"),INFO,(data)=>{
+    
+                        DELETEDATASTORE(" ","UserID");
+    
+                        DELETEDATASTORE(" ","UserCodes");
+                                 
+                        RELOAD();
+    
+                    });
+
+                },()=>{
+
+                    TOASTVIEW("Something Went Wrong,Try Again Later!");
+
+                });
+
+            },()=>{
+
+                TOASTVIEW("Failed To Validate User Account");
+
+            });
+
+        });
+
+    });
+
+};
+const MJOMBAALIDIRECTMESSAGE=()=>{
+
+    const DATA=["Device","Time","Message","Replies","Location","ChatterId"];
+
+    DEVICE((Data)=>{
+
+        CONDITION(localStorage.getItem("ChatId"),()=>{
+
+            GETDATA(MJOMBAALIDATABASELINK,"WebSiteContacts",(Datata)=>{
+
+                FINDER(Datata,"ID",localStorage.getItem("ChatId"),(Dated)=>{
+
+                    JSONADDER(Dated.Message,[sessionStorage.getItem("Message")],(ResDatata)=>{
+
+                        const INFO=[Dated.Data,new Date(),ResDatata,Dated.Replies,Dated.Replies,localStorage.getItem("ChatterId")];
+                    
+                        UPDATEDATA(MJOMBAALIDATABASELINK,"WebSiteContacts",Dated.ID,INFO,(data)=>{
+
+                            console.log(data);
+
+                            DATASTORE(" ","SavedChatMessages",ResDatata);
+
+                            DATASTORE(" ","ReplyChatMessages",Dated.Replies);
+
+                            CONTACTUSPAGE();
+
+                        });
+
+                    });
+
+                });
+
+            });
+
+        },()=>{
+
+            const INFO=[Data,new Date(),`["${sessionStorage.getItem("Message")}"]`,"[]","",localStorage.getItem("ChatterId")];
+
+            INSERTDATA(MJOMBAALIDATABASELINK,"WebSiteContacts",DATA,INFO,(ResData)=>{
+
+                DATASTORE(" ","ChatId",ResData.uniqueId);
+
+                DATASTORE(" ","SavedChatMessages",sessionStorage.getItem("Message"));
+
+                const Message=`Dear Doctor;\n You Have A Message From The Client,Open App to Chat With Them it.\nSender:${localStorage.getItem("ChatterId")}\nMessage:${sessionStorage.getItem("Message")}`
+                
+                EMAILSERVER("mjombaali975@gmail.com","Message From Client",Message,()=>{
+
+                    CONTACTUSPAGE();
+                    
+                });
+
+            });
+
+        });
+
+    });
+
+};
