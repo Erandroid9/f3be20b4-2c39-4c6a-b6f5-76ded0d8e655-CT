@@ -302,12 +302,18 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                     fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.DESKTOP)
                     .then(res =>res.text())
                     .then(data=>{
-                        if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
-                            localStorage.setItem("PROJECT",data);                               
-                        } else {
-                            localStorage.setItem("Packaged",new Date());
-                            localStorage.setItem("PROJECT",data);
-                        };
+                            if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
+                                localStorage.setItem("PROJECT",data);                               
+                            } else {
+                                if (localStorage.getItem("Packaged")) {
+                                    localStorage.setItem("Packaged",new Date());
+                                    localStorage.setItem("PROJECT",data);
+                                    location.reload();
+                                } else {
+                                    localStorage.setItem("Packaged",new Date());
+                                    localStorage.setItem("PROJECT",data);
+                                };
+                            };
                     })
                     .catch(error=>{console.log(error)})
                     
@@ -318,11 +324,17 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                         fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.ANDROID)
                         .then(res =>res.text())
                         .then(data=>{
-                            if (localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
+                            if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
                                 localStorage.setItem("PROJECT",data);                               
                             } else {
-                                localStorage.setItem("Packaged",new Date());
-                                localStorage.setItem("PROJECT",data);
+                                if (localStorage.getItem("Packaged")) {
+                                    localStorage.setItem("Packaged",new Date());
+                                    localStorage.setItem("PROJECT",data);
+                                    location.reload();
+                                } else {
+                                    localStorage.setItem("Packaged",new Date());
+                                    localStorage.setItem("PROJECT",data);
+                                };
                             };
                         })
                         .catch(error=>{console.log(error)})
@@ -332,11 +344,17 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                         fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.WEB)
                         .then(res =>res.text())
                         .then(data=>{                          
-                            if (localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
+                            if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
                                 localStorage.setItem("PROJECT",data);                               
                             } else {
-                                localStorage.setItem("Packaged",new Date());
-                                localStorage.setItem("PROJECT",data);
+                                if (localStorage.getItem("Packaged")) {
+                                    localStorage.setItem("Packaged",new Date());
+                                    localStorage.setItem("PROJECT",data);
+                                    location.reload();
+                                } else {
+                                    localStorage.setItem("Packaged",new Date());
+                                    localStorage.setItem("PROJECT",data);
+                                };
                             };
                         })
                         .catch(error=>{console.log(error)})
