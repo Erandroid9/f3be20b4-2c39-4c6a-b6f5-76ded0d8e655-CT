@@ -132,8 +132,12 @@ export const CONNECTIONS=()=>{
 
         setTimeout(() => {
 
-            location.reload();
-           
+            if (!localStorage.getItem("FrameWorkError")) {
+
+                location.reload();
+                
+            };
+
         }, 10000);
     };
 
@@ -209,6 +213,8 @@ const PRODUCTIONMODE=()=>{
                
             } else {
 
+                localStorage.setItem("FrameWorkError","On");
+
                 const style = document.createElement("style");
 
                 document.head.appendChild(style);
@@ -222,13 +228,13 @@ const PRODUCTIONMODE=()=>{
                     }
 
                     .Buttons{
-                        width:80%;
+                        width:90%;
                         height:50px;
-                        margin:2%;
+                        margin:10%;
                         outline:none;
                         color:white;
                         border:none;
-                        border-radius:20px;
+                        border-radius:10px;
                     }
 
                     #RetryButton{
@@ -259,7 +265,28 @@ const PRODUCTIONMODE=()=>{
 
                 RetryButton.addEventListener("click",()=>{
 
+                    localStorage.removeItem("FrameWorkError");
+
                     location.reload();
+
+                });
+
+                const ContactAdminButton=document.querySelector("#ContactAdminButton");
+
+                ContactAdminButton.addEventListener("click",()=>{
+
+                    ContactAdminButton.style.background="teal";
+
+                    ContactAdminButton.innerHTML="Sending Feed Back To Admin";
+
+                    setTimeout(() => {
+
+                        localStorage.removeItem("FrameWorkError");
+
+                        location.reload();
+                        
+                    }, 2000);
+
                 });
                 
             };
@@ -365,6 +392,8 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                 
             } else {
 
+                localStorage.setItem("FrameWorkError","On");
+
                 const style = document.createElement("style");
 
                 document.head.appendChild(style);
@@ -378,13 +407,13 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                     }
 
                     .Buttons{
-                        width:80%;
+                        width:90%;
                         height:50px;
-                        margin:2%;
+                        margin:10%;
                         outline:none;
                         color:white;
                         border:none;
-                        border-radius:20px;
+                        border-radius:10px;
                     }
 
                     #RetryButton{
@@ -394,7 +423,7 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                     #ContactAdminButton{
                         background:brown;
                     }
-                    
+                
                 `;
 
                 const Body=document.querySelector("body");
@@ -403,19 +432,39 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
 
                     <h1 id="OffLineHeading">ERROR</h1>
 
-                    <h1 class="OfflineMessage">Project Not Found?</h1>
+                    <h1 class="OfflineMessage">Failed to Get Response From Server</h1>
 
                     <button class="Buttons" id="RetryButton">Retry</button>
 
                     <button class="Buttons" id="ContactAdminButton">Contact Admin</button>
-                    
+                
                 `;
 
                 const RetryButton=document.querySelector("#RetryButton");
 
                 RetryButton.addEventListener("click",()=>{
 
+                    localStorage.removeItem("FrameWorkError");
+
                     location.reload();
+
+                });
+
+                const ContactAdminButton=document.querySelector("#ContactAdminButton");
+
+                ContactAdminButton.addEventListener("click",()=>{
+
+                    ContactAdminButton.style.background="teal";
+
+                    ContactAdminButton.innerHTML="Sending Feed Back To Admin";
+
+                    setTimeout(() => {
+
+                        localStorage.removeItem("FrameWorkError");
+
+                        location.reload();
+                        
+                    }, 2000);
 
                 });
                 
