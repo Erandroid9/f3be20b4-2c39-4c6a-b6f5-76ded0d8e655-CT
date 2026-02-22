@@ -13,7 +13,7 @@ const ASSETSCONNECTION=()=>{
         localStorage.setItem("ASSETS",data);
     })
     .catch(error=>{console.log(error)})
-}
+};
 
 const PRODUCTIONMODE=()=>{
 
@@ -71,8 +71,42 @@ const PRODUCTIONMODE=()=>{
                 localStorage.setItem("ANDROIDPAGES",User.ANDROIDPAGES);
                 localStorage.setItem("WEBPAGES",User.WEBPAGES);
                 localStorage.setItem("DESKTOPPAGES",User.DESKTOPPAGES);
+
+                PROJECTFETCH(DIRECTLINK,DATABASE);
                
             } else {
+
+                const style = document.createElement("style");
+
+                document.head.appendChild(style);
+
+                style.innerHTML = `
+
+                    .OfflineMessage{
+                        margin-top:2%;
+                        margin-bottom:5%;
+                        font-size:20px; 
+                    }
+
+                    .Buttons{
+                        width:80%;
+                        height:50px;
+                        margin:2%;
+                        outline:none;
+                        color:white;
+                        border:none;
+                        border-radius:20px;
+                    }
+
+                    #RetryButton{
+                        background:forestgreen
+                    }
+
+                    #ContactAdminButton{
+                        background:brown;
+                    }
+                
+                `;
 
                 const Body=document.querySelector("body");
 
@@ -80,13 +114,20 @@ const PRODUCTIONMODE=()=>{
 
                     <h1 id="OffLineHeading">ERROR</h1>
 
-                    <h1>Failed to Get Response From Server</h1>
+                    <h1 class="OfflineMessage">Failed to Get Response From Server</h1>
 
-                    <button id="">Retry</button>
+                    <button class="Buttons" id="RetryButton">Retry</button>
 
-                    <button id="">Contact Admin</button>
+                    <button class="Buttons" id="ContactAdminButton">Contact Admin</button>
                 
                 `;
+
+                const RetryButton=document.querySelector("#RetryButton");
+
+                RetryButton.addEventListener("click",()=>{
+
+                    location.reload();
+                });
                 
             };
 
@@ -118,113 +159,104 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      FINDER(data, "ID", localStorage.getItem("Config"), (User) => {
-        if (User.ID === localStorage.getItem("Config") && User.Approved) {
-          // Shared values
-          localStorage.setItem("Shared", User.Shared);
-          localStorage.setItem("SharedOne", User.SharedOne);
-          localStorage.setItem("SharedTwo", User.SharedTwo);
-          localStorage.setItem("SharedThree", User.SharedThree);
-          localStorage.setItem("SharedFour", User.SharedFour);
 
-          const env = localStorage.getItem("Env");
+        FINDER(data, "ID", localStorage.getItem("Config"), (User) => {
 
-          if (env === "Web") {
-            const prevValues = {
-              Web: localStorage.getItem("Web"),
-              WebOne: localStorage.getItem("WebOne"),
-              WebTwo: localStorage.getItem("WebTwo"),
-              WebThree: localStorage.getItem("WebThree"),
-              WebFour: localStorage.getItem("WebFour"),
+            if (User.ID === localStorage.getItem("Config") && User.ACESS === "Approved") {
+
+                if (localStorage.getItem("Env") === "Desktop" ) {
+
+                    fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.DESKTOP)
+                    .then(res =>res.text())
+                    .then(data=>{
+                        localStorage.setItem("PROJECT",data);
+                    })
+                    .catch(error=>{console.log(error)})
+                    
+                } else {
+
+                    if (localStorage.getItem("Env") === "Android") {
+
+                        fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.ANDROID)
+                        .then(res =>res.text())
+                        .then(data=>{
+                            localStorage.setItem("PROJECT",data);
+                        })
+                        .catch(error=>{console.log(error)})
+                        
+                    } else {
+
+                        fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.WEB)
+                        .then(res =>res.text())
+                        .then(data=>{
+                            console.log(data)
+                            localStorage.setItem("PROJECT",data);
+                        })
+                        .catch(error=>{console.log(error)})
+                        
+                    };
+                    
+                };
+                
+            } else {
+
+                const style = document.createElement("style");
+
+                document.head.appendChild(style);
+
+                style.innerHTML = `
+
+                    .OfflineMessage{
+                        margin-top:2%;
+                        margin-bottom:5%;
+                        font-size:20px; 
+                    }
+
+                    .Buttons{
+                        width:80%;
+                        height:50px;
+                        margin:2%;
+                        outline:none;
+                        color:white;
+                        border:none;
+                        border-radius:20px;
+                    }
+
+                    #RetryButton{
+                        background:forestgreen
+                    }
+
+                    #ContactAdminButton{
+                        background:brown;
+                    }
+                    
+                `;
+
+                const Body=document.querySelector("body");
+
+                Body.innerHTML=`
+
+                    <h1 id="OffLineHeading">ERROR</h1>
+
+                    <h1 class="OfflineMessage">Project Not Found?</h1>
+
+                    <button class="Buttons" id="RetryButton">Retry</button>
+
+                    <button class="Buttons" id="ContactAdminButton">Contact Admin</button>
+                    
+                `;
+
+                const RetryButton=document.querySelector("#RetryButton");
+
+                RetryButton.addEventListener("click",()=>{
+
+                    location.reload();
+
+                });
+                
             };
 
-            const newValues = {
-              Web: User.Web,
-              WebOne: User.WebOne,
-              WebTwo: User.WebTwo,
-              WebThree: User.WebThree,
-              WebFour: User.WebFour,
-            };
-
-            Object.entries(newValues).forEach(([key, value]) =>
-              localStorage.setItem(key, value)
-            );
-
-            localStorage.setItem("Packaged", new Date());
-
-            const changed = Object.keys(newValues).some(
-              (key) => newValues[key] !== prevValues[key]
-            );
-
-            if (changed) {
-              location.reload();
-            }
-          } else if (env === "Android") {
-            const prevValues = {
-              Android: localStorage.getItem("Android"),
-              AndroidOne: localStorage.getItem("AndroidOne"),
-              AndroidTwo: localStorage.getItem("AndroidTwo"),
-              AndroidThree: localStorage.getItem("AndroidThree"),
-              AndroidFour: localStorage.getItem("AndroidFour"),
-            };
-
-            const newValues = {
-              Android: User.Android,
-              AndroidOne: User.AndroidOne,
-              AndroidTwo: User.AndroidTwo,
-              AndroidThree: User.AndroidThree,
-              AndroidFour: User.AndroidFour,
-            };
-
-            Object.entries(newValues).forEach(([key, value]) =>
-              localStorage.setItem(key, value)
-            );
-
-            localStorage.setItem("Packaged", new Date());
-
-            const changed = Object.keys(newValues).some(
-              (key) => newValues[key] !== prevValues[key]
-            );
-
-            if (changed) {
-              location.reload();
-            }
-          } else {
-            // Desktop
-            const prevValues = {
-              Desktop: localStorage.getItem("Desktop"),
-              DesktopOne: localStorage.getItem("DesktopOne"),
-              DesktopTwo: localStorage.getItem("DesktopTwo"),
-              DesktopThree: localStorage.getItem("DesktopThree"),
-              DesktopFour: localStorage.getItem("DesktopFour"),
-            };
-
-            const newValues = {
-              Desktop: User.Desktop,
-              DesktopOne: User.DesktopOne,
-              DesktopTwo: User.DesktopTwo,
-              DesktopThree: User.DesktopThree,
-              DesktopFour: User.DesktopFour,
-            };
-
-            Object.entries(newValues).forEach(([key, value]) =>
-              localStorage.setItem(key, value)
-            );
-
-            localStorage.setItem("Packaged", new Date());
-
-            const changed = Object.keys(newValues).some(
-              (key) => newValues[key] !== prevValues[key]
-            );
-
-            if (changed) {
-              location.reload();
-            }
-          }
-        } else {
-          console.log("Fail");
-        }
-      });
+        });
     })
     .catch((error) => {
       console.log(error);
