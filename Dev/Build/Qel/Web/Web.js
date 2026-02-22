@@ -24,7 +24,7 @@ const MOBILEVIEW=()=>{
 
     HEADERVIEW((ELEMENT)=>{
 
-        LEFTTEXTVIEW(ELEMENT,"Qel",()=>{
+        LEFTTEXTVIEW(ELEMENT,"Qel Medistore Limited",()=>{
 
         });
 
