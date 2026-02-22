@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erandix Systems | Loading</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0a0a0a;
+  font-family:Arial, sans-serif;
+  color:#00ffb3;
+}
+
+.box{
+  width:90%;
+  max-width:420px;
+  padding:30px;
+  border:1px solid #00ffb3;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 0 25px rgba(0,255,179,0.3);
+}
+
+.spinner{
+  width:50px;
+  height:50px;
+  margin:0 auto 20px;
+  border:5px solid rgba(0,255,179,0.2);
+  border-top:5px solid #00ffb3;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  100%{transform:rotate(360deg);}
+}
+
+.progress{
+  height:6px;
+  background:rgba(0,255,179,0.2);
+  border-radius:10px;
+  margin-top:20px;
+  overflow:hidden;
+}
+
+.bar{
+  height:100%;
+  width:0%;
+  background:#00ffb3;
+  transition:width .4s;
+}
+
+.small{
+  font-size:13px;
+  opacity:.7;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>ERANDIX SYSTEMS</h2>
+  <div class="spinner"></div>
+  <div id="msg">Connecting to secure server...</div>
+
+  <div class="progress">
+    <div class="bar" id="bar"></div>
+  </div>
+
+  <div class="small">Loading data from server securely...</div>
+</div>
+
+<script>
+const messages=[
+"Establishing encrypted connection...",
+"Fetching live data from server...",
+"Verifying system integrity...",
+"Finalizing...",
+"System Ready ✔"
+];
+
+let i=0, progress=0;
+const msg=document.getElementById("msg");
+const bar=document.getElementById("bar");
+
+function load(){
+  msg.textContent=messages[i++];
+  progress+=100/messages.length;
+  bar.style.width=progress+"%";
+  if(i<messages.length){
+    setTimeout(load,1800);
+  }
+}
+setTimeout(load,1000);
+</script>
+
+</body>
+</html>
