@@ -49,50 +49,29 @@ const PRODUCTIONMODE=()=>{
 
     .then(data=>{
 
-        FINDER(data,"Version",localStorage.getItem("Version"),(User)=>{
+        FINDER(data,"VERSION",localStorage.getItem("Version"),(User)=>{
 
-            if (User.Version === localStorage.getItem("Version")&&User.Approved) {
+            if (User.VERSION === localStorage.getItem("Version")&&User.ACCESS === "Approved") {
 
-                localStorage.setItem("ElementsStyles",User.ElementsStyles);
-                localStorage.setItem("ComponentsStyles",User.ComponentsStyles);
-                localStorage.setItem("ClassesStyle",User.ClassesStyle);
-                localStorage.setItem("IdStyles",User.IdStyles);
-                localStorage.setItem("SharedStyles",User.SharedStyles);
-                localStorage.setItem("Links",User.Links);
-                localStorage.setItem("Constants",User.Constants);
-                localStorage.setItem("ERANDCONFIG",User.AutoRun);
-                localStorage.setItem("ElementJavascript",User.ElementJavascript);
-                localStorage.setItem("ComponentsJavascript",User.ComponentsJavascript);
-                localStorage.setItem("ClassesJavascript",User.ClassesJavascript);
-                localStorage.setItem("IdJavascript",User.IdJavascript);
-                localStorage.setItem("SharedJavascript",User.SharedJavascript);
-                localStorage.setItem("PlugInJavascript",User.PlugInJavascript);
-                localStorage.setItem("TemplatePages",User.TemplatePages);
-                localStorage.setItem("TemplatePlugins",User.TemplatePlugins);
-                localStorage.setItem("TemplateCss",User.TemplateCss);
-                localStorage.setItem("TemplateJs",User.TemplateJs);
-          
-
-                if (localStorage.getItem("Env") === "Web" ) {
-
-                    localStorage.setItem("WebJavascript",User.WebJavascript);
-                    
-                } else {
-
-                    if (localStorage.getItem("Env") === "Android" ) {
-
-                        localStorage.setItem("AndroidJavascript",User.AndroidJavascript);
-                        
-                    } else {
-
-                        localStorage.setItem("DesktopJavascript",User.DesktopJavascript);
-                        
-                    };
-                    
-                };
-
-                PROJECTFETCH(DIRECTLINK,DATABASE);
-                
+                localStorage.setItem("APIS",User.APIS);
+                localStorage.setItem("COLORS",User.COLORS);
+                localStorage.setItem("COMPONENTS",User.COMPONENTS);
+                localStorage.setItem("CONSTANTS",User.CONSTANTS);
+                localStorage.setItem("ERANDCONFIG",User.ERANDCONFIG);
+                localStorage.setItem("FUNCTIONS",User.FUNCTIONS);
+                localStorage.setItem("PAGES",User.PAGES);
+                localStorage.setItem("PLUGINS",User.PLUGINS);
+                localStorage.setItem("PROJECTANDROID",User.PROJECTANDROID);
+                localStorage.setItem("PROJECTWEB",User.PROJECTWEB);
+                localStorage.setItem("PROJECTDESKTOP",User.PROJECTDESKTOP);
+                localStorage.setItem("RUN",User.RUN);
+                localStorage.setItem("SERVER",User.SERVER);
+                localStorage.setItem("STYLES",User.STYLES);
+                localStorage.setItem("TEMPLATES",User.TEMPLATES);
+                localStorage.setItem("ANDROIDPAGES",User.ANDROIDPAGES);
+                localStorage.setItem("WEBPAGES",User.WEBPAGES);
+                localStorage.setItem("DESKTOPPAGES",User.DESKTOPPAGES);
+               
             } else {
 
                 const Body=document.querySelector("body");
