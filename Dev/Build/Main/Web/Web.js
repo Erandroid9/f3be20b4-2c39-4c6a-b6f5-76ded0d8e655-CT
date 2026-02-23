@@ -164,11 +164,15 @@ const MOBILEVIEW=()=>{
 
         INLINEVIEW(ELEMENT,"95%","50px",TRANSPARENT,"2%",(ELEMENTS)=>{
 
-            TEXTVIEW(ELEMENTS,"Policies",()=>{
+            TEXTVIEW(ELEMENTS,"Policies",(ELEMENTSS)=>{
+
+                FORWARDNAV(ELEMENTSS,MOBILEPOLICY,MOBILEVIEW);
 
             });
 
-            TEXTVIEW(ELEMENTS,"App",()=>{
+            TEXTVIEW(ELEMENTS,"Apps",(ELEMENTSS)=>{
+
+                FORWARDNAV(ELEMENTSS,MOBILEAPPS,MOBILEVIEW);
 
             });
 
@@ -190,11 +194,7 @@ const MOBILECONTACTUS=()=>{
 
         LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELEMENTSS)=>{
 
-            CLICK(ELEMENTSS,()=>{
-
-                ROUTE("",MOBILEVIEW,"MOBILEVIEW");
-
-            });
+            BACKNAV(ELEMENTSS,MOBILEVIEW);
 
         });
 
@@ -239,6 +239,46 @@ const MOBILECONTACTUS=()=>{
         BUTTON(ELEMENT,"Submit",FORESTGREEN,()=>{
 
         });
+
+    });
+
+};
+
+const MOBILEAPPS=()=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELSE)=>{
+
+            BACKNAV(ELSE,MOBILEVIEW);
+
+        });
+
+        RIGHTTEXTVIEW(ELEMENT,"Apps",()=>{
+
+        });
+
+    },(ELEMENT)=>{
+
+    });
+
+};
+
+const MOBILEPOLICY=()=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELSE)=>{
+
+            BACKNAV(ELSE,MOBILEVIEW);
+
+        });
+
+        RIGHTTEXTVIEW(ELEMENT,"Terms and Conditions",()=>{
+
+        });
+
+    },(ELEMENT)=>{
 
     });
 
