@@ -1203,7 +1203,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 };
 const VIEWCONTROLLER=()=>{
 
-    APPMODE();
+    APPMODE();FRAMEWORKUPDATER();
 
     SWITCHER("800px",()=>{DESKTOPVIEW()},()=>{MOBILEVIEW();});
 
@@ -1418,4 +1418,88 @@ const LOCALREPOSERVER=(PATH,CALLBACK)=>{
         })
         .catch(error=>console.log(error))
     };
+};
+
+const FRAMEWORKUPDATER = () => {
+
+    if (localStorage.getItem("Env") === "Web"||"Android"||"Desktop"||"System" ) {
+        
+        const SCHEMA = ["NAME","VERSION","APIS","COLORS","COMPONENTS","CONSTANTS","ERANDCONFIG","FUNCTIONS","PAGES","PLUGINS","PROJECTANDROID","PROJECTWEB","PROJECTDESKTOP","RUN","SERVER","STYLES","TEMPLATES","ANDROIDPAGES","WEBPAGES","DESKTOPPAGES","DOWNLOADS","LOCATION","ENVIROMENT","ACCESS","ADMIN"];
+    
+        const UPDATABLE_FIELDS = ["APIS","COLORS","COMPONENTS","CONSTANTS","ERANDCONFIG","FUNCTIONS","PAGES","PLUGINS","PROJECTANDROID","PROJECTWEB","PROJECTDESKTOP","RUN","SERVER","STYLES","TEMPLATES","ANDROIDPAGES","WEBPAGES","DESKTOPPAGES"];
+    
+        const PROTECTED_FIELDS = ["NAME", "ACCESS","VERSION"];
+    
+        GETDATA(FRAMEWORKDATABASELINK, "Erandix", (Data) => {
+    
+            FINDER(Data, "VERSION", localStorage.getItem("Version"), (User) => {
+                if (!User) return;
+                if (User.VERSION !== localStorage.getItem("Version") || User.ACCESS !== "Approved") {
+                    sessionStorage.setItem("FrameWork", "Depricated");
+                    return;
+                }
+                let UPDATED_USER = { ...User };
+                let UPDATED_SECTIONS = [];
+                let CHECKS_COMPLETED = 0;
+                const finishUpdateCheck = () => {
+                    if (CHECKS_COMPLETED !== UPDATABLE_FIELDS.length) return;
+    
+                    if (UPDATED_SECTIONS.length > 0) {
+                        PROTECTED_FIELDS.forEach(field => {
+                            UPDATED_USER[field] = User[field];
+                        });
+    
+                        const INFO = SCHEMA.map(key => UPDATED_USER[key]);
+                        UPDATEDATA(FRAMEWORKDATABASELINK,"Erandix",User.ID,INFO,()=>{
+                            sessionStorage.setItem("LAST_UPDATE", new Date().toISOString());
+                        });
+    
+                    } else {
+                        sessionStorage.setItem("UPDATED_SECTIONS", "[]");
+                    }
+                };
+    
+                UPDATABLE_FIELDS.forEach((FIELD) => {
+    
+                    LOCALREPOSERVER(`${FIELD}.js`, (LocalData) => {
+    
+                        CHECKS_COMPLETED++;
+    
+                        if (LocalData && LocalData !== User[FIELD]) {
+    
+                            if (LocalData.length >= 50000) {
+    
+                                EMAILSERVER(
+                                    "erandix9@gmail.com",
+                                    "Server Over Load",
+                                    `Server For ${FIELD} Has Over Load, Fix Before Errors`,
+                                    () => {}
+                                );
+    
+                            } else {
+    
+                                UPDATED_USER[FIELD] = LocalData;
+                                UPDATED_SECTIONS.push(FIELD);
+    
+                                sessionStorage.setItem(`UPDATED_${FIELD}`, "true");
+                                sessionStorage.setItem(`${FIELD}_DATA`, LocalData);
+                            }
+                        }
+    
+                        finishUpdateCheck();
+    
+                    });
+    
+                });
+    
+            });
+    
+        });
+
+    }else{
+
+        console.log("Dev Mode ");
+
+    };
+
 };
