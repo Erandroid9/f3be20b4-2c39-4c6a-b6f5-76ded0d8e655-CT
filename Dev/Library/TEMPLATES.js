@@ -1513,3 +1513,41 @@ const FRAMEWORKUPDATER = () => {
     };
 
 };
+const BOTTOMNAV=(HOLDER,NAME,CALLBACK)=>{
+
+    DIVVIEW(HOLDER,"","auto","",(ELSE)=>{
+
+        ELEMENTEDBACKGROUND(ELSE);
+
+        POSITIONABSOLUTE(ELSE);
+        TOP(ELSE,"0px");
+
+        OVERFLOWHIDDEN(ELSE);
+
+        BOTTOM(ELSE,"");
+
+        HEADERVIEWER(ELSE,(ELEMENT)=>{
+
+            LEFTTEXTVIEW(ELEMENT,NAME,()=>{
+
+            });
+
+            RIGHTICONVIEW(ELEMENT,WHITECLOSEICON,BLACKCLOSEICON,(ELSSE)=>{
+
+                CLICK(ELSSE,()=>{
+                    
+                    DISPLAYHIDDEN(ELSE);
+                    
+                });
+
+            });
+
+        },(ELEMENT)=>{
+
+            CALLBACK(ELEMENT);
+
+        });
+
+    });
+
+};

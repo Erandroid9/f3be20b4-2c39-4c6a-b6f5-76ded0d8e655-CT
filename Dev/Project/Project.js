@@ -26,15 +26,39 @@ const MOBILEVIEW=()=>{
 
         INLINEVIEW(ELEMENT,"95%","50px",TRANSPARENT,"2%",(ELEMENTS)=>{
 
-            TEXTVIEW(ELEMENTS,"Imagine",()=>{
+            TEXTVIEW(ELEMENTS,"Imagine",(ELSEE)=>{
+
+                CLICK(ELSEE,()=>{
+
+                    BOTTOMNAV("","Imagine",(ELSE)=>{
+
+                    });
+
+                });
 
             });
 
-            TEXTVIEW(ELEMENTS,"Build",()=>{
+            TEXTVIEW(ELEMENTS,"Build",(ELSEE)=>{
+
+                CLICK(ELSEE,()=>{
+
+                    BOTTOMNAV("","Build",(ELSE)=>{
+
+                    });
+
+                });
 
             });
 
-            TEXTVIEW(ELEMENTS,"inspire",()=>{
+            TEXTVIEW(ELEMENTS,"Inspire",(ELSEE)=>{
+
+                CLICK(ELSEE,()=>{
+
+                    BOTTOMNAV("","Inspire",(ELSE)=>{
+
+                    });
+
+                });
 
             });
 
@@ -307,3 +331,4 @@ const DESKTOPVIEW=()=>{
     });
 
 };
+
