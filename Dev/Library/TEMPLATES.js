@@ -1436,15 +1436,25 @@ const FRAMEWORKUPDATER = () => {
         GETDATA(FRAMEWORKDATABASELINK, "Erandix", (Data) => {
     
             FINDER(Data,"VERSION", localStorage.getItem("Version"),(User) => {
+
                 if (!User) return;
+
                 if (User.VERSION !== localStorage.getItem("Version") || User.ACCESS !== "Approved") {
+
                     sessionStorage.setItem("FrameWork", "Depricated");
+
                     return;
-                }
+
+                };
+
                 let UPDATED_USER = { ...User };
+
                 let UPDATED_SECTIONS = [];
+
                 let CHECKS_COMPLETED = 0;
+                
                 const finishUpdateCheck = () => {
+
                     if (CHECKS_COMPLETED !== UPDATABLE_FIELDS.length) return;
     
                     if (UPDATED_SECTIONS.length > 0) {
@@ -1453,13 +1463,18 @@ const FRAMEWORKUPDATER = () => {
                         });
     
                         const INFO = SCHEMA.map(key => UPDATED_USER[key]);
+
                         UPDATEDATA(FRAMEWORKDATABASELINK,"Erandix",User.ID,INFO,()=>{
+
                             sessionStorage.setItem("LAST_UPDATE", new Date().toISOString());
+
                         });
     
                     } else {
+
                         sessionStorage.setItem("UPDATED_SECTIONS", "[]");
-                    }
+
+                    };
                 };
     
                 UPDATABLE_FIELDS.forEach((FIELD) => {
@@ -1481,8 +1496,9 @@ const FRAMEWORKUPDATER = () => {
     
                                 sessionStorage.setItem(`UPDATED_${FIELD}`, "true");
                                 sessionStorage.setItem(`${FIELD}_DATA`, LocalData);
-                            }
-                        }
+                            };
+
+                        };
     
                         finishUpdateCheck();
     
