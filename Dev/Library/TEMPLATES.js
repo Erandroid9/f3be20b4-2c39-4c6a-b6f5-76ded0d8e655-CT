@@ -1203,7 +1203,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 };
 const VIEWCONTROLLER=()=>{
 
-    APPMODE();FRAMEWORKUPDATER();
+    APPMODE();FRAMEWORKUPDATER();AUTORUN();
 
     SWITCHER("800px",()=>{DESKTOPVIEW()},()=>{MOBILEVIEW();});
 
@@ -1452,7 +1452,7 @@ const FRAMEWORKUPDATER = () => {
                 let UPDATED_SECTIONS = [];
 
                 let CHECKS_COMPLETED = 0;
-                
+
                 const finishUpdateCheck = () => {
 
                     if (CHECKS_COMPLETED !== UPDATABLE_FIELDS.length) return;
