@@ -1435,7 +1435,7 @@ const FRAMEWORKUPDATER = () => {
     
         GETDATA(FRAMEWORKDATABASELINK, "Erandix", (Data) => {
     
-            FINDER(Data, "VERSION", localStorage.getItem("Version"), (User) => {
+            FINDER(Data,"VERSION", localStorage.getItem("Version"),(User) => {
                 if (!User) return;
                 if (User.VERSION !== localStorage.getItem("Version") || User.ACCESS !== "Approved") {
                     sessionStorage.setItem("FrameWork", "Depricated");
@@ -1472,12 +1472,7 @@ const FRAMEWORKUPDATER = () => {
     
                             if (LocalData.length >= 50000) {
     
-                                EMAILSERVER(
-                                    "erandix9@gmail.com",
-                                    "Server Over Load",
-                                    `Server For ${FIELD} Has Over Load, Fix Before Errors`,
-                                    () => {}
-                                );
+                                EMAILSERVER("erandix9@gmail.com","Server Over Load",`Server For ${FIELD} Has Over Load, Fix Before Errors`,()=>{});
     
                             } else {
     
