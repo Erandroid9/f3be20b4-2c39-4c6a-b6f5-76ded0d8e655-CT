@@ -87,50 +87,22 @@ const ICONVIEW=(HOLDER,WHITESOURCE,DARKSOURCE,callBack)=>{
 };
 const LEFTICONVIEW=(HOLDER,WHITESOURCE,DARKSOURCE,callBack)=>{
 
-    CONDITION(localStorage.getItem("BODYCOLOR") === "#000000" ,()=>{
+    ICONVIEW(HOLDER,WHITESOURCE,DARKSOURCE,(ELSI)=>{
 
-        IMAGE(HOLDER,"20px","20px",WHITESOURCE,"",(ELEMENTS)=>{
+        MARGINLEFT(ELSI,"3%");
 
-            MARGINLEFT(ELEMENTS,"2%");
-
-            callBack(ELEMENTS);
-
-        });
-
-    },()=>{
-
-        IMAGE(HOLDER,"20px","20px",DARKSOURCE,"",(ELEMENTS)=>{
-
-            MARGINLEFT(ELEMENTS,"2%");
-
-            callBack(ELEMENTS);
-
-        });
+        callBack(ELSI);
 
     });
 
 };
 const RIGHTICONVIEW=(HOLDER,WHITESOURCE,DARKSOURCE,callBack)=>{
 
-    CONDITION(localStorage.getItem("BODYCOLOR") === "#000000" ,()=>{
+    ICONVIEW(HOLDER,WHITESOURCE,DARKSOURCE,(ELSI)=>{
 
-        IMAGE(HOLDER,"20px","20px",WHITESOURCE,"",(ELEMENTS)=>{
+        MARGINRIGHT(ELSI,"3%");
 
-            MARGINRIGHT(ELEMENTS,"2%");
-
-            callBack(ELEMENTS);
-
-        });
-
-    },()=>{
-
-        IMAGE(HOLDER,"20px","20px",DARKSOURCE,"",(ELEMENTS)=>{
-
-            MARGINRIGHT(ELEMENTS,"2%");
-
-            callBack(ELEMENTS);
-
-        });
+        callBack(ELSI);
 
     });
 
@@ -582,7 +554,6 @@ const INLINEVIEW=(HOLDER,WIDE,TALL,COLORS,AMOUNT,callBack)=>{
 const QELPAY=(AMOUNT,DETAILS,NUMBER)=>{
 
     ERANDIXPAY("nVFedcBBCajwuw6qeIotnxbiGmkZtSl3","59QxDngTrjpQhF0FH0p8Dem54L8=","https://qelmedistore.site",AMOUNT,DETAILS,NUMBER);
-
 
 };
 const GETSAVEDINDEX=(NAME,CALLBACK)=>{
@@ -1419,4 +1390,32 @@ const ELEMENTEDBACKGROUND=(ELEMENT)=>{
 
     });
 
+};
+const BACKNAV=(ELEMENT,NAME)=>{
+
+    CLICK(ELEMENT,()=>{
+
+        ROUTE("",NAME,`${NAME}`);
+
+    });
+
+};
+const FORWARDNAV=(ELEMENT,NAME,BACKNAME)=>{
+
+    CLICK(ELEMENT,()=>{
+
+        ROUTE(" ",NAME,`${BACKNAME}`);
+
+    });
+
+};
+const LOCALREPOSERVER=(PATH,CALLBACK)=>{
+    if (navigator.onLine) {
+        fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Library/"+PATH)
+        .then(res =>res.text())
+        .then(Data =>{
+            CALLBACK(Data);
+        })
+        .catch(error=>console.log(error))
+    };
 };

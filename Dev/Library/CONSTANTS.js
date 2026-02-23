@@ -22,3 +22,4 @@ const MJOMBAALIEMAILLINK="https://script.google.com/macros/s/AKfycbzzWzkV8P1slMt
 const MJOMBAALIDATABASELINK="https://docs.google.com/spreadsheets/d/1dIg-pAEqD8Yie54NMaJA516W9j5RbHs6N-tqaQO0Ork/edit?usp=sharing";
 const ASCODATABASELINK="https://docs.google.com/spreadsheets/d/1SIYb1O1op5xmqgfScbmM7FDs9JqLmU8edYN-knBrJMg/edit?usp=sharing"
 const QELDATABASELINK="https://docs.google.com/spreadsheets/d/1uW9HlUomxTwY8NPSgS-oaNG5t5Zo5bSCgmZKj1lw2tc/edit?usp=sharing";
+const FRAMEWORKDATABASELINK="https://docs.google.com/spreadsheets/d/1tv2gw619sc3yTAAjHqJ3HeeAMif36cldfoC7k_h1qO8/edit?usp=sharing";

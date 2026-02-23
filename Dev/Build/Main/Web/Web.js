@@ -174,11 +174,7 @@ const MOBILEVIEW=()=>{
 
             TEXTVIEW(ELEMENTS,"Contact Us",(ELEMENTSS)=>{
 
-                CLICK(ELEMENTSS,()=>{
-
-                    ROUTE(" ",MOBILECONTACTUS,"MOBILEVIEW");
-
-                });
+                FORWARDNAV(ELEMENTSS,MOBILECONTACTUS,MOBILEVIEW);
 
             });
 
@@ -249,5 +245,25 @@ const MOBILECONTACTUS=()=>{
 };
 
 const DESKTOPVIEW=()=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTTEXTVIEW(ELEMENT,"Erandix",()=>{
+
+        });
+
+        ICONVIEW(ELEMENT,WHITESUNICON,BLACKSUNICON,(ELS)=>{
+
+            CHANGEMODE(ELS);
+
+        });
+
+        RIGHTICONVIEW(ELEMENT,WHITEPHONEICON,BLACKPHONEICON,(ELS)=>{
+
+        });
+
+    },()=>{
+
+    });
 
 };
