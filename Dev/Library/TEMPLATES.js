@@ -1422,8 +1422,12 @@ const LOCALREPOSERVER=(PATH,CALLBACK)=>{
 
 const FRAMEWORKUPDATER = () => {
 
-    if (localStorage.getItem("Env") === "Web"||"Android"||"Desktop"||"System" ) {
+    if (localStorage.getItem("Env") === "Dev" ) {
         
+       sessionStorage.setItem("DevMode",true);
+        
+    }else{
+
         const SCHEMA = ["NAME","VERSION","APIS","COLORS","COMPONENTS","CONSTANTS","ERANDCONFIG","FUNCTIONS","PAGES","PLUGINS","PROJECTANDROID","PROJECTWEB","PROJECTDESKTOP","RUN","SERVER","STYLES","TEMPLATES","ANDROIDPAGES","WEBPAGES","DESKTOPPAGES","DOWNLOADS","LOCATION","ENVIROMENT","ACCESS","ADMIN"];
     
         const UPDATABLE_FIELDS = ["APIS","COLORS","COMPONENTS","CONSTANTS","ERANDCONFIG","FUNCTIONS","PAGES","PLUGINS","PROJECTANDROID","PROJECTWEB","PROJECTDESKTOP","RUN","SERVER","STYLES","TEMPLATES","ANDROIDPAGES","WEBPAGES","DESKTOPPAGES"];
@@ -1495,10 +1499,6 @@ const FRAMEWORKUPDATER = () => {
             });
     
         });
-
-    }else{
-
-        console.log("Dev Mode ");
 
     };
 
