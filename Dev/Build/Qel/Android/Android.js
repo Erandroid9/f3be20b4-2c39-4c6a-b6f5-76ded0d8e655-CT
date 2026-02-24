@@ -114,6 +114,8 @@ const MOBILEVIEW=()=>{
 
                         DATASTORE(" ","BODYCOLOR","#FFFFFF");
 
+                        AndroidStatusBar("#FFFFFF");
+
                         RELOAD();
 
                     });
@@ -129,6 +131,8 @@ const MOBILEVIEW=()=>{
                         DATASTORE(" ","ModeSelected","Dark");
 
                         DATASTORE(" ","BODYCOLOR","#000000");
+
+                        AndroidStatusBar("#000000");
 
                         RELOAD();
 
