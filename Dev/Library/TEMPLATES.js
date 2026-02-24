@@ -128,13 +128,9 @@ const LOGINVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
         DIVVIEW(ELEMENTS,"80%","80%",TRANSPARENT,(ELEMENT)=>{
 
-            TEXT(ELEMENT,"h1",WORD,"",(ELEMENT)=>{
+            TEXT(ELEMENT,"h1",WORD,(ELEMENT)=>{
 
                 FONTSIZE(ELEMENT,"30px");
 
@@ -168,7 +164,7 @@ const LOGINVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Sign In",FORESTGREEN,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Sign In",FORESTGREEN,(ELEMENT)=>{
 
                 CLICK(ELEMENT,()=>{
 
@@ -202,7 +198,7 @@ const LOGINVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Create Account",TEAL,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Create Account",TEAL,(ELEMENT)=>{
 
                 WIDTH(ELEMENT,"95%");
 
@@ -224,11 +220,7 @@ const LOGINVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
-        TEXT(ELEMENTS,"h1",WORD,"",(ELEMENT)=>{
+        TEXT(ELEMENTS,"h1",WORD,(ELEMENT)=>{
 
             FONTSIZE(ELEMENT,"30px");
 
@@ -262,7 +254,7 @@ const LOGINVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Sign In",FORESTGREEN,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Sign In",FORESTGREEN,(ELEMENT)=>{
 
             CLICK(ELEMENT,()=>{
 
@@ -296,7 +288,7 @@ const LOGINVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Create Account",TEAL,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Create Account",TEAL,(ELEMENT)=>{
 
             WIDTH(ELEMENT,"95%");
 
@@ -686,13 +678,9 @@ const CREATEACCOUNTVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
         DIVVIEW(ELEMENTS,"80%","80%",TRANSPARENT,(ELEMENT)=>{
 
-            TEXT(ELEMENT,"h1",WORD,"",(ELEMENT)=>{
+            TEXT(ELEMENT,"h1",WORD,(ELEMENT)=>{
 
                 FONTSIZE(ELEMENT,"30px");
 
@@ -718,7 +706,7 @@ const CREATEACCOUNTVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Sign Up",FORESTGREEN,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Sign Up",FORESTGREEN,(ELEMENT)=>{
 
                 CLICK(ELEMENT,()=>{
 
@@ -766,7 +754,7 @@ const CREATEACCOUNTVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Log In",TEAL,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Log In",TEAL,(ELEMENT)=>{
 
                 WIDTH(ELEMENT,"95%");
 
@@ -788,11 +776,7 @@ const CREATEACCOUNTVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
-        TEXT("","h1",WORD,"",(ELEMENT)=>{
+        TEXT(ELEMENTS,"h1",WORD,(ELEMENT)=>{
 
             FONTSIZE(ELEMENT,"30px");
 
@@ -818,7 +802,7 @@ const CREATEACCOUNTVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Sign Up",FORESTGREEN,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Sign Up",FORESTGREEN,(ELEMENT)=>{
 
             CLICK(ELEMENT,()=>{
 
@@ -866,7 +850,7 @@ const CREATEACCOUNTVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Log In",TEAL,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Log In",TEAL,(ELEMENT)=>{
 
             WIDTH(ELEMENT,"95%");
 
@@ -893,13 +877,9 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
         DIVVIEW(ELEMENTS,"80%","80%",TRANSPARENT,(ELEMENT)=>{
 
-            TEXT(ELEMENT,"h1",WORD,"",(ELEMENT)=>{
+            TEXT(ELEMENT,"h1",WORD,(ELEMENT)=>{
 
                 FONTSIZE(ELEMENT,"30px");
 
@@ -913,7 +893,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Verify",FORESTGREEN,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Verify",FORESTGREEN,(ELEMENT)=>{
 
                 CLICK(ELEMENT,()=>{
 
@@ -947,7 +927,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Cancel",BROWN,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Cancel",BROWN,(ELEMENT)=>{
 
                 WIDTH(ELEMENT,"95%");
 
@@ -973,11 +953,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
-        TEXT("","h1",WORD,"",(ELEMENT)=>{
+        TEXT(ELEMENTS,"h1",WORD,(ELEMENT)=>{
 
             FONTSIZE(ELEMENT,"30px");
 
@@ -985,7 +961,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        TEXT("","h1","Enter Code Sent Your Email","",(ELEMENT)=>{
+        TEXT(ELEMENTS,"h1","Enter Code Sent Your Email",(ELEMENT)=>{
 
             FONTSIZE(ELEMENT,"20px");
 
@@ -999,7 +975,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Verify",FORESTGREEN,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Verify",FORESTGREEN,(ELEMENT)=>{
 
             CLICK(ELEMENT,()=>{
 
@@ -1033,7 +1009,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Cancel",BROWN,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Cancel",BROWN,(ELEMENT)=>{
 
             WIDTH(ELEMENT,"95%");
 
@@ -1045,7 +1021,7 @@ const EMAILVERIFICATIONVIEW=(ELEMENTS,WORD,LINK)=>{
 
                 DELETEDATASTORE(" ","UserCodes");
 
-                RELOAD();
+                CREATEACCOUNTVIEW(ELEMENTS,WORD,LINK);
 
             });
 
@@ -1064,13 +1040,9 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
         DIVVIEW(ELEMENTS,"80%","80%",TRANSPARENT,(ELEMENT)=>{
 
-            TEXT(ELEMENT,"h1",WORD,"",(ELEMENT)=>{
+            TEXT(ELEMENT,"h1",WORD,(ELEMENT)=>{
 
                 FONTSIZE(ELEMENT,"30px");
 
@@ -1084,7 +1056,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Recover",FORESTGREEN,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Recover",FORESTGREEN,(ELEMENT)=>{
 
                 CLICK(ELEMENT,()=>{
 
@@ -1110,7 +1082,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
             BREAK(ELEMENT);
 
-            BUTTON(ELEMENT,"Cancel",BROWN,WHITE,(ELEMENT)=>{
+            BUTTON(ELEMENT,"Cancel",BROWN,(ELEMENT)=>{
 
                 WIDTH(ELEMENT,"95%");
 
@@ -1132,11 +1104,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BREAK(ELEMENTS);
-
-        BREAK(ELEMENTS);
-
-        TEXT("","h1",WORD,"",(ELEMENT)=>{
+        TEXT(ELEMENTS,"h1",WORD,(ELEMENT)=>{
 
             FONTSIZE(ELEMENT,"30px");
 
@@ -1144,7 +1112,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        TEXT("","h1","Enter Code Sent Your Email","",(ELEMENT)=>{
+        TEXT(ELEMENTS,"h1","Enter Code Sent Your Email",(ELEMENT)=>{
 
             FONTSIZE(ELEMENT,"20px");
 
@@ -1158,7 +1126,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Recover",FORESTGREEN,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Recover",FORESTGREEN,(ELEMENT)=>{
 
             CLICK(ELEMENT,()=>{
 
@@ -1184,7 +1152,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
         BREAK(ELEMENTS);
 
-        BUTTON(ELEMENTS,"Cancel",BROWN,WHITE,(ELEMENT)=>{
+        BUTTON(ELEMENTS,"Cancel",BROWN,(ELEMENT)=>{
 
             WIDTH(ELEMENT,"95%");
 
@@ -1192,7 +1160,7 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 
             CLICK(ELEMENT,()=>{
          
-                RELOAD();
+                LOGINVIEW(ELEMENTS,WORD,LINK);
 
             });
 
@@ -1578,4 +1546,17 @@ const CLEARNAV=()=>{
 
     DELETEDATASTORE("","PreviousPage");
     
+};
+const LOGINPAGECHECKER=(CALLBACK,CALLBACKONE)=>{
+
+    CONDITION(localStorage.getItem("User"),()=>{
+
+        CALLBACK();
+
+    },()=>{
+
+        CALLBACKONE();
+
+    });
+
 };
