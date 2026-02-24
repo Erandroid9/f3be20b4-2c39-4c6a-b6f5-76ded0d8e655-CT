@@ -3,7 +3,7 @@
     <p><strong>Effective Date:</strong> 01/03/2026</p>
 
     <p>
-        Welcome to <strong>Qel</strong> (“we,” “our,” or “us”). Your privacy and health data protection are extremely important to us. 
+        Welcome to <strong>Qel</strong>. Your privacy and health data protection are extremely important to us. 
         This Privacy Policy explains how we collect, use, and protect your information when you use the Qel Android App 
         for ordering and delivery of medical equipment (local and wholesale).
     </p>
@@ -120,7 +120,7 @@
 
     <p>
         To make a request, contact us at: <br>
-        <strong>Email:</strong> [Insert Support Email]
+        <strong>Email:</strong>qelmedistorelimited@gmail.com
     </p>
 
     <hr>
@@ -142,14 +142,13 @@
     <h2>10. Contact Us</h2>
     <p>
         <strong>Qel Medistore Limited</strong><br>
-        Email: [Insert Email]<br>
-        Phone: [Insert Phone Number]<br>
-        Address: [Insert Business Address]
+        Email: qelmedistorelimited@gmail.com<br>
+        Address: Uganda
     </p>
 
     <hr>
 
     <h2>✅ Your Consent</h2>
     <p>
-        By clicking <strong>“I Agree”</strong> and using the Qel app, you confirm that you have read, understood, and agreed to this Privacy Policy.
+        You confirm that you have read, understood, and agreed to this Privacy Policy and Review Them in Our policies Section in the App for New Updates.
     </p>
