@@ -13,3 +13,9 @@ const readSms=()=>{
     AndroidUSSD.readSms();
     showResult(message);
 };
+const AndroidReload=()=>{
+    AndroidUSSD.reloadApp();
+};
+const AndroidStatusBar=(COLORS)=>{
+    AndroidUSSD.setSystemBarsColor(COLORS);
+};
