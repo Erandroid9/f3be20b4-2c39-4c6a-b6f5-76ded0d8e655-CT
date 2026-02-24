@@ -367,6 +367,26 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                     LOGINPAGECHECKER(()=>{
 
+                        BOTTOMNAV("","Qel Pay",(ELSESS)=>{
+
+                            LOADERVIEW(ELSESS,(LOADSER)=>{
+
+                                TOP(LOADSER,"50%");
+
+                                QELPAY(Number(sessionStorage.getItem("Amount")),Data.ProductName,"",(DataLink)=>{
+
+                                    IFRAME(ELSE,DataLink,(ESE)=>{
+
+                                        DISPLAYHIDDEN(LOADSER);
+
+                                    });
+
+                                });
+                                
+                            });
+
+                        });
+
                     },()=>{
 
                         ROUTE(" ",LOGINPAGEROUTE,"MOBILEPRODUCTDETAILPAGE");

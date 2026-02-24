@@ -1236,7 +1236,7 @@ const WEBSITE=(LINK)=>{
     location.href=LINK;
 
 };
-const ERANDIXPAY=(KEY,SECRET,SITE,AMOUNT,DETAILS,PHONE)=>{
+const ERANDIXPAY=(KEY,SECRET,SITE,AMOUNT,DETAILS,PHONE,CALLBACK)=>{
 
     const DATA={
         consumer_key: KEY,
@@ -1269,7 +1269,7 @@ const ERANDIXPAY=(KEY,SECRET,SITE,AMOUNT,DETAILS,PHONE)=>{
 
             CLOUDPOST(SUBMIZATIONLINK,DATATWO,(dataTwo)=>{
 
-                WEBSITE(dataTwo.redirect_url);
+                CALLBACK(dataTwo.redirect_url);
 
             });
 
