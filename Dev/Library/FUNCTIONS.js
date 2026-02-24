@@ -268,7 +268,14 @@ const DATASTORE=(Type,Name,data)=>{
 };
 const RELOAD=()=>{
 
-    location.reload();
+    CONDITION(localStorage.getItem("Env") === "Android",()=>{
+
+        AndroidReload();
+    },()=>{
+
+        location.reload();
+
+    });
 
 };
 const FUNCTIONED=(ELEMENT,FUN,callBack)=>{

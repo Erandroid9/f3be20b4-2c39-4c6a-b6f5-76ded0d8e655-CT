@@ -17,5 +17,12 @@ const AndroidReload=()=>{
     AndroidUSSD.reloadApp();
 };
 const AndroidStatusBar=(COLORS)=>{
-    AndroidUSSD.setSystemBarsColor(COLORS);
+
+    if (localStorage.getItem("Env") === "Android") {
+
+        AndroidUSSD.setSystemBarsColor(COLORS);
+        
+        return;
+    };
+    
 };
