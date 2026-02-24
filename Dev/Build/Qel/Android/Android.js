@@ -1,5 +1,19 @@
 const ERANDES=()=>{
 
+    DOWNLOADSAVEINDEX(QELDATABASELINK,"Products",()=>{
+
+    },()=>{
+
+        RELOAD();
+
+    });
+    
+    DOWNLOADSAVEINDEX(QELDATABASELINK,"Catergory",()=>{
+
+    },()=>{
+
+    });
+
     VIEWCONTROLLER();
 
 };
@@ -15,6 +29,84 @@ const MOBILEVIEW=()=>{
             LOADERVIEW(ELEMENT,(LOAD)=>{
 
                 TOP(LOAD,"50%");
+
+                GETSAVEDINDEX("Catergory",(Data)=>{
+
+                    CHECKER(Data.Approved,()=>{
+
+                        DISPLAYHIDDEN(LOAD);
+    
+                        INLINEVIEW(ELEMENT,"95%","250px",TRANSPARENT,"2%",(ELEMENTS)=>{
+
+                            OVERFLOWHIDDEN(ELEMENTS);
+    
+                            BORDER(ELEMENTS,localStorage.getItem("APPCOLOR")+"50");
+    
+                            HEADER(ELEMENTS,(ESE)=>{
+    
+                                LEFTTEXTVIEW(ESE,Data.ProductName,(ELSESE)=>{
+    
+                                    FONTSIZE(ELSESE,"16px");
+    
+                                });
+    
+                            });
+    
+                            INLINEVIEW(ELEMENTS,"100%","200px",TRANSPARENT,"0",(ELEMENTIS)=>{
+    
+                                POSITIONABSOLUTE(ELEMENTIS);
+
+                                OVERFLOWHIDDEN(ELEMENTIS);
+
+                                OVERFLOWX(ELEMENTIS);
+
+                                BOTTOM(ELEMENTIS,"");
+    
+                                LOADERVIEW(ELEMENTIS,(LOADS)=>{
+    
+                                    GETSAVEDINDEX("Products",(Datata)=>{
+
+                                        CHECKER( Data.ID === Datata.ProductCatergory && Datata.Approved,()=>{
+
+                                            DISPLAYHIDDEN(LOADS);
+
+                                            INLINEVIEW(ELEMENTIS,"40%","190px",TRANSPARENT,"2%",(ELEMENTISS)=>{
+
+                                                FLEXSHRINK(ELEMENTISS);
+
+                                                IMAGE(ELEMENTISS,"","",Datata.ProductImage,TRANSPARENT,()=>{
+
+                                                });
+
+                                                FOOTER(ELEMENTISS,(ELISA)=>{
+
+                                                    BACKGROUND(ELISA,BLACK+"80");
+
+                                                    TEXTVIEW(ELISA,Datata.ProductName,(EISE)=>{
+
+                                                        FONTSIZE(EISE,"16px");
+
+                                                    });
+
+                                                });
+
+                                            });
+
+                                        });
+    
+                                        console.log(Datata);
+    
+                                    });
+    
+                                });
+                        
+                            });
+                            
+                        });
+
+                    });
+
+                });
 
             });
 
