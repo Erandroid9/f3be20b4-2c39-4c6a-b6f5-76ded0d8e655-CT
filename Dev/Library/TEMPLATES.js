@@ -1203,12 +1203,6 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 };
 const VIEWCONTROLLER=()=>{
 
-    CHECKER(localStorage.getItem("Env") === "Android",()=>{
-
-        AndroidStatusBar(localStorage.getItem("BODYCOLOR"));
-
-    });
-
     DELETEDATASTORE("","PreviousPage");
 
     APPMODE();FRAMEWORKUPDATER();AUTORUN();
@@ -1358,9 +1352,21 @@ const APPMODE=()=>{
 
         BODYCOLOR(BLACK,WHITE);
 
+        CHECKER(localStorage.getItem("Env") === "Android",()=>{
+
+            AndroidStatusBar(BLACK);
+
+        });
+
     },()=>{
 
         BODYCOLOR(WHITE,BLACK);
+
+        CHECKER(localStorage.getItem("Env") === "Android",()=>{
+
+            AndroidStatusBar(WHITE);
+
+        });
 
     });
 
