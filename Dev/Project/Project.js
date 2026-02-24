@@ -42,42 +42,103 @@ const MOBILEVIEW=()=>{
 
     },()=>{
 
-        DIVVIEW("","","","",(ELEMENT)=>{
+        CONDITION(localStorage.getItem("ModeSelected"),()=>{
 
-            LOADERVIEW(ELEMENT,(ELE)=>{
+            DIVVIEW("","","","",(ELEMENT)=>{
 
-                TOP(ELE,"50%");
+                LOADERVIEW(ELEMENT,(ELE)=>{
 
-                SERVERASSETS("Policies/Qel/Qel.txt",(Data)=>{
+                    TOP(ELE,"50%");
 
-                    DISPLAYHIDDEN(ELE);
+                    SERVERASSETS("Policies/Qel/Qel.txt",(Data)=>{
 
-                    DISPLAY(ELEMENT,Data);
+                        DISPLAYHIDDEN(ELE);
 
-                    BUTTON(ELEMENT,"I Agree",FORESTGREEN,(ELSE)=>{
-                        
-                        COLOR(ELSE,"");
+                        DISPLAY(ELEMENT,Data);
 
-                        CLICK(ELSE,()=>{
+                        BUTTON(ELEMENT,"I Agree",FORESTGREEN,(ELSE)=>{
+                            
+                            COLOR(ELSE,"");
 
-                            DATASTORE(" ","Terms",true);
+                            CLICK(ELSE,()=>{
 
-                            MOBILEVIEW();
+                                DATASTORE(" ","Terms",true);
+
+                                MOBILEVIEW();
+
+                            });
 
                         });
 
+                        BREAK(ELEMENT);
+
+                        BREAK(ELEMENT);
+
                     });
-
-                    BREAK(ELEMENT);
-
-                    BREAK(ELEMENT);
 
                 });
 
             });
 
-        });
+        },()=>{
 
+            DIVVIEW("","","","",(ELEMENT)=>{
+
+                BREAK(ELEMENT);BREAK(ELEMENT);
+
+                TEXTVIEW(ELEMENT,"APP MODE",()=>{});
+
+                BREAK(ELEMENT);
+
+                TEXTVIEW(ELEMENT,"Please Select The Mode You Want the App ",(ELS)=>{
+
+                    FONTSIZE(ELS,"16px");
+
+                });
+
+                BREAK(ELEMENT);
+
+                TEXTVIEW(ELEMENT,"CLick To Shop",(ELS)=>{
+
+                    FONTSIZE(ELS,"18px");
+
+                });
+
+                BREAK(ELEMENT);BREAK(ELEMENT);
+
+                BUTTON(ELEMENT,"Light Mode",FORESTGREEN,(ELS)=>{
+
+                    CLICK(ELS,()=>{
+
+                        DATASTORE(" ","ModeSelected","Light");
+
+                        DATASTORE(" ","BODYCOLOR","#FFFFFF");
+
+                        RELOAD();
+
+                    });
+                    
+                });
+
+                BREAK(ELEMENT);
+
+                BUTTON(ELEMENT,"Dark Mode",FORESTGREEN,(ELS)=>{
+
+                    CLICK(ELS,()=>{
+
+                        DATASTORE(" ","ModeSelected","Dark");
+
+                        DATASTORE(" ","BODYCOLOR","#000000");
+
+                        RELOAD();
+
+                    });
+                    
+                });
+
+            });''
+
+        });
     });
 
 };
