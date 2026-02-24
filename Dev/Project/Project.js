@@ -90,11 +90,21 @@ const MOBILEVIEW=()=>{
 
                                                 });
 
+                                                FORWARDNAV(ELEMENTISS,MOBILEPRODUCTDETAILPAGE,"MOBILEVIEW");
+
+                                                CLICK(ELEMENTISS,()=>{
+
+                                                    JSONIFICATION(Datata,(ItemData)=>{
+
+                                                        DATASTORE("","Items",ItemData);
+
+                                                    });
+
+                                                });
+
                                             });
 
                                         });
-    
-                                        console.log(Datata);
     
                                     });
     
@@ -235,6 +245,30 @@ const MOBILEVIEW=()=>{
             });''
 
         });
+    });
+
+};
+
+const MOBILEPRODUCTDETAILPAGE=()=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELIS)=>{
+
+            BACKNAV(ELIS,MOBILEVIEW);
+
+        });
+
+        DEJSONDATA("","Items",(Data)=>{
+
+            RIGHTTEXTVIEW(ELEMENT,Data.ProductName,()=>{
+
+            });
+
+        });
+        
+    },(ELEMENT)=>{
+
     });
 
 };
