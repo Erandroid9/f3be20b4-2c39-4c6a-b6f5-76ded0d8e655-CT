@@ -1,5 +1,7 @@
 export const CONNECTIONS=()=>{
 
+    STYLESDOWNLOAD();
+
     ASSETSCONNECTION();
 
     PRODUCTIONMODE();
@@ -304,6 +306,7 @@ const PRODUCTIONMODE=()=>{
 };
 
 const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
+    
   const FINDER = (DATA, ELEMENT, ELEMENT1, ACTION) => {
     const user = DATA.find((item) => item[ELEMENT] === ELEMENT1);
     return ACTION(user ? user : false);
@@ -475,4 +478,13 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
     .catch((error) => {
       console.log(error);
     });
+};
+
+const STYLESDOWNLOAD=()=>{
+    fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/index.css/")
+    .then(res =>res.text())
+    .then(data =>{
+        localStorage.setItem("APPCSS",data);
+    })
+    .catch(er=>{console.log(er)})
 };

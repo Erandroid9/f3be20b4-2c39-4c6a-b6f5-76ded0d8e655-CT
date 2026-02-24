@@ -1203,6 +1203,8 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 };
 const VIEWCONTROLLER=()=>{
 
+    DELETEDATASTORE("","PreviousPage");
+
     APPMODE();FRAMEWORKUPDATER();AUTORUN();
 
     SWITCHER("800px",()=>{DESKTOPVIEW()},()=>{MOBILEVIEW();});
@@ -1400,6 +1402,15 @@ const BACKNAV=(ELEMENT,NAME)=>{
     });
 
 };
+const PREBACKNAV=(NAME)=>{
+
+    HIDER(100,()=>{
+
+        DATASTORE("","PreviousPage",NAME);
+
+    });
+
+};
 const FORWARDNAV=(ELEMENT,NAME,BACKNAME)=>{
 
     CLICK(ELEMENT,()=>{
@@ -1550,4 +1561,9 @@ const BOTTOMNAV=(HOLDER,NAME,CALLBACK)=>{
 
     });
 
+};
+const CLEARNAV=()=>{
+
+    DELETEDATASTORE("","PreviousPage");
+    
 };

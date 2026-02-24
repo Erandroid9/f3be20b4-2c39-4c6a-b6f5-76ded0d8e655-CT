@@ -1309,17 +1309,21 @@ const RANDOMCODEGENERATOR=(callback) => {
   }
 };
 const SERVERASSETS=(PATH,CALLBACK)=>{
-
     if(localStorage.getItem("Env") === "Dev"){
-
-        CALLBACK("../Assets/"+PATH);
-
+        fetch("../Assets/"+PATH)
+        .then(res =>res.text())
+        .then(data =>{
+            CALLBACK(data);
+        })
+        .catch(er=>{console.log(er)})
     }else{
-
-        CALLBACK("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/"+PATH);
-
+        fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/"+PATH)
+        .then(res =>res.text())
+        .then(data =>{
+            CALLBACK(data);
+        })
+        .catch(er=>{console.log(er)})
     };
-
 };
 const GETEMAILS=(callBack)=>{
 
