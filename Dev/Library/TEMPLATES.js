@@ -1203,6 +1203,12 @@ const FORGOTPASSWORDVIEW=(ELEMENTS,WORD,LINK)=>{
 };
 const VIEWCONTROLLER=()=>{
 
+    CHECKER(localStorage.getItem("Env") === "Android",()=>{
+
+        AndroidStatusBar(localStorage.getItem("BODYCOLOR"));
+
+    });
+
     DELETEDATASTORE("","PreviousPage");
 
     APPMODE();FRAMEWORKUPDATER();AUTORUN();
