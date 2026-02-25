@@ -1,7 +1,5 @@
 const ERANDES=()=>{
 
-    DATASTORE(" ","User",true);
-
     DOWNLOADSAVEINDEX(QELDATABASELINK,"Products",()=>{
 
     },()=>{
@@ -377,9 +375,11 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                                 QELPAY(Number(sessionStorage.getItem("Amount")),Data.ProductName,"",(DataLink)=>{
 
-                                    DISPLAYHIDDEN(LOADSER);
+                                    IFRAME(ELSESS,DataLink,()=>{
 
-                                    WEBSITE(DataLink);
+                                        DISPLAYHIDDEN(LOADSER);
+
+                                    });
 
                                 });
                                 

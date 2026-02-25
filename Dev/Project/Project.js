@@ -375,9 +375,11 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                                 QELPAY(Number(sessionStorage.getItem("Amount")),Data.ProductName,"",(DataLink)=>{
 
-                                    DISPLAYHIDDEN(LOADSER);
+                                    IFRAME(ELSESS,DataLink,()=>{
 
-                                    console.log(DataLink);
+                                        DISPLAYHIDDEN(LOADSER);
+
+                                    });
 
                                 });
                                 
