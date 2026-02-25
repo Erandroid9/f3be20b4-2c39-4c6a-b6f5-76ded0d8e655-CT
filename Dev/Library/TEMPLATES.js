@@ -1564,3 +1564,24 @@ const LOGINPAGECHECKER=(CALLBACK,CALLBACKONE)=>{
     });
 
 };
+const LOGINPAGEROUTE=(BACKPAGE,NAME,LINK)=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELIS)=>{
+
+            BACKNAV(ELIS,BACKPAGE);
+
+        });
+
+        RIGHTTEXTVIEW(ELEMENT,"Access",()=>{
+
+        });
+
+    },(ELEMENT)=>{
+
+        LOGINVIEW(ELEMENT,NAME,LINK);
+
+    });
+   
+};
