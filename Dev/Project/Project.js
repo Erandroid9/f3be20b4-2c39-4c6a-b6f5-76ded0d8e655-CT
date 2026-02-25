@@ -377,7 +377,7 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                                     DISPLAYHIDDEN(LOADSER);
 
-                                    WEBSITE(DataLink);
+                                    console.log(DataLink);
 
                                 });
                                 

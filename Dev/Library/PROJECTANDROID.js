@@ -32,3 +32,12 @@ const AndroidStatusBar=(COLORS)=>{
     };
     
 };
+const OUTLINK=(LINK)=>{
+
+    if (localStorage.getItem("Env") === "Android") {
+
+        Android.openExternal(LINK);
+
+    };
+
+};
