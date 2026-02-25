@@ -479,31 +479,112 @@ const MOBILEUSERACCOUNTPAGE=()=>{
 
         BREAK(ELEMENT);
 
-        DIVVIEW(ELEMENT,"95%","300px",ORANGE,()=>{
+        DIVVIEW(ELEMENT,"95%","auto",TRANSPARENT,(ELSE)=>{
+
+            CONDITION(localStorage.getItem("User"),()=>{
+
+                IMAGE(ELSE,"300px","300px",ERANDIXLOGO,TRANSPARENT,(ELSSE)=>{
+
+                    BORDER(ELSSE,WHITE+"80%");
+
+                });
+
+                BREAK(ELSE);
+
+                INLINEVIEW(ELSE,"95%","50px",TRANSPARENT,"2%",(ELSESS)=>{
+
+                    LEFTTEXTVIEW(ELSESS,"UserName",()=>{
+
+                    });
+
+                    RIGHTTEXTVIEW(ELSESS,"UserName",()=>{
+
+                    });
+
+                });
+
+                BREAK(ELSE);
+
+                INLINEVIEW(ELSE,"95%","50px",TRANSPARENT,"2%",(ELSESS)=>{
+
+                    LEFTTEXTVIEW(ELSESS,"Location",()=>{
+
+                    });
+
+                    RIGHTTEXTVIEW(ELSESS,"Kampala",()=>{
+
+                    });
+
+                });
+
+                BREAK(ELSE);
+
+                INLINEVIEW(ELSE,"95%","50px",TRANSPARENT,"2%",(ELSESS)=>{
+
+                    BUTTON(ELSESS,"Change Location",FORESTGREEN,(ELSIE)=>{
+
+                        WIDTH(ELSIE,"40%");
+
+                        HEIGHT(ELSIE,"40px");
+
+                    });
+
+                    BUTTON(ELSESS,"Contact Number",BLUE,(ELSIE)=>{
+
+                        WIDTH(ELSIE,"40%");
+
+                        HEIGHT(ELSIE,"40px");
+
+                    });
+
+                });
+
+            },()=>{
+
+
+                LOGINVIEW(ELSE,"Qel",QELDATABASELINK);
+
+            });
 
         });
 
         BREAK(ELEMENT);
 
-        BUTTON(ELEMENT,"Settings",FORESTGREEN,(ELSE)=>{
+        LINE(ELEMENT,FORESTGREEN);
 
-            FORWARDNAV(ELSE,MOBILESETTINGSPAGE,"MOBILEUSERACCOUNTPAGE");
-
-        });
-
-        BREAK(ELEMENT);
-
-        BUTTON(ELEMENT,"Policies",FORESTGREEN,(ELSE)=>{
-
-            FORWARDNAV(ELSE,MOBILEPOLICIESPAGE,"MOBILEUSERACCOUNTPAGE");
+        TEXTVIEW(ELEMENT,"Options",()=>{
 
         });
 
-        BREAK(ELEMENT);
+        LINE(ELEMENT,FORESTGREEN);
 
-        BUTTON(ELEMENT,"Contact Us",TEAL,(ELSE)=>{
+        DIVVIEW(ELEMENT,"95%","auto",TRANSPARENT,(ELEMENTS)=>{
 
-            FORWARDNAV(ELSE,MOBILECONTACTUSPAGE,"MOBILEUSERACCOUNTPAGE");
+            BREAK(ELEMENTS);
+
+            BUTTON(ELEMENTS,"Settings",FORESTGREEN,(ELSE)=>{
+
+                FORWARDNAV(ELSE,MOBILESETTINGSPAGE,"MOBILEUSERACCOUNTPAGE");
+
+            });
+
+            BREAK(ELEMENTS);
+
+            BUTTON(ELEMENTS,"Policies",FORESTGREEN,(ELSE)=>{
+
+                FORWARDNAV(ELSE,MOBILEPOLICIESPAGE,"MOBILEUSERACCOUNTPAGE");
+
+            });
+
+            BREAK(ELEMENTS);
+
+            BUTTON(ELEMENTS,"Contact Us",TEAL,(ELSE)=>{
+
+                FORWARDNAV(ELSE,MOBILECONTACTUSPAGE,"MOBILEUSERACCOUNTPAGE");
+
+            });
+
+            BREAK(ELEMENTS);
 
         });
 
@@ -559,6 +640,115 @@ const MOBILEGRIDPAGE=()=>{
 
             TOP(LOAD,"50%");
 
+            GETSAVEDINDEX("Catergory",(Data)=>{
+
+                DISPLAYHIDDEN(LOAD);
+
+                CHECKER(Data.Approved,()=>{
+
+                    INLINEVIEW(ELEMENT,"45%","200px",TRANSPARENT,"2%",(ELEMENTS)=>{
+
+                        IMAGE(ELEMENTS,"","",Data.ProductImage,TRANSPARENT,()=>{
+
+                        });
+
+                        FOOTER(ELEMENTS,(ELISA)=>{
+
+                            BACKGROUND(ELISA,BLACK+"70")
+
+                            TEXTVIEW(ELISA,Data.ProductName,(ELES)=>{
+
+                                FONTSIZE(ELES,"15px");
+
+                            });
+
+                        });
+
+                        CLICK(ELEMENTS,()=>{
+
+                            DATASTORE("","ProductId",Data.ID);
+                            DATASTORE("","ProductName",Data.ProductName);
+
+                        });
+
+                        FORWARDNAV(ELEMENTS,MOBILEGRIDITEMPAGE,MOBILEGRIDPAGE);
+    
+                    });
+
+                });
+
+            });
+
+        });
+
+    });
+
+};
+
+const MOBILEGRIDITEMPAGE=()=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELIS)=>{
+
+            BACKNAV(ELIS,MOBILEGRIDPAGE);
+
+        });
+
+        RIGHTTEXTVIEW(ELEMENT,sessionStorage.getItem("ProductName"),()=>{
+
+        });
+
+    },(ELEMENT)=>{
+
+        LOADERVIEW(ELEMENT,(LOAD)=>{
+
+            TOP(LOAD,"50%");
+
+            GETSAVEDINDEX("Products",(Data)=>{
+
+                DISPLAYHIDDEN(LOAD);
+
+                CHECKER(Data.ProductCatergory === sessionStorage.getItem("ProductId") && Data.Approved,()=>{
+
+                    INLINEVIEW(ELEMENT,"45%","200px",TRANSPARENT,"2%",(ELEMENTS)=>{
+
+                        IMAGE(ELEMENTS,"","",Data.ProductImage,TRANSPARENT,()=>{
+
+                        });
+
+                        FOOTER(ELEMENTS,(ELISA)=>{
+
+                            BACKGROUND(ELISA,BLACK+"70")
+
+                            TEXTVIEW(ELISA,Data.ProductName,(ELES)=>{
+
+                                FONTSIZE(ELES,"15px");
+
+                            });
+
+                        });
+
+                        CLICK(ELEMENTS,()=>{
+
+                            DELETEDATASTORE("","ProductBought");
+
+                            JSONIFICATION(Data,(ItemData)=>{
+
+                                DATASTORE("","Items",ItemData);
+
+                            });
+
+                        });
+
+                        FORWARDNAV(ELEMENTS,MOBILEPRODUCTDETAILPAGE,"MOBILEGRIDITEMPAGE");
+
+                    });
+
+                });
+
+            });
+
         });
 
     });
@@ -611,6 +801,10 @@ const MOBILESETTINGSPAGE=()=>{
 
                 TOASTCONDITION(localStorage.getItem("User"),"Device Has No Account",()=>{
 
+                    DELETEDATASTORE(" ","User");
+
+                    RELOAD();
+
                 });
 
             });
@@ -624,6 +818,58 @@ const MOBILESETTINGSPAGE=()=>{
             CLICK(ELSE,()=>{
 
                 TOASTCONDITION(localStorage.getItem("User"),"Log In To Delete Account",()=>{
+
+                    BOTTOMNAV("","Delete Account",(ELEMENTS)=>{
+
+                        BREAK(ELEMENTS);
+
+                        DIVVIEW(ELEMENTS,"95%","80%",TRANSPARENT,(ELS)=>{
+
+                            LOADERVIEW(ELS,(LOAD)=>{
+
+                                TOP(LOAD,"50%");
+
+                                SERVERASSETS("Policies/Qel/Qel.txt",(Data)=>{
+
+                                    DISPLAYHIDDEN(LOAD);
+
+                                    DISPLAY(ELS,Data);
+
+                                });
+
+                            });
+
+                        });
+
+                        BREAK(ELEMENTS);
+
+                        INPUT(ELEMENTS,"","Enter Reason For Account Deletion","Deleted",()=>{
+
+                        });
+
+                        BREAK(ELEMENTS);
+
+                        BUTTON(ELEMENTS,"Delete My Account",RED,(ELS)=>{
+
+                            CLICK(ELS,()=>{
+
+                                TOASTCONDITION(sessionStorage.getItem("Deleted"),"Enter Reason For Account Deletion",()=>{
+
+                                    DELETEDATASTORE(" ","User");
+
+                                    DELETEACCOUNTSERVER();
+
+                                });
+
+                            });
+
+                        });
+
+                        BREAK(ELEMENTS);
+
+                        BREAK(ELEMENTS);
+
+                    });
 
                 });
 
@@ -691,11 +937,11 @@ const MOBILECONTACTUSPAGE=()=>{
 
         BUTTON(ELEMENT,"Website",TEAL,(ELSE)=>{
 
-        });
+            CLICK(ELSE,()=>{
 
-        BREAK(ELEMENT);
+                WEBSITE("https://qelmedistore.site");
 
-        BUTTON(ELEMENT,"Call",TEAL,(ELSE)=>{
+            });
 
         });
 
@@ -703,19 +949,27 @@ const MOBILECONTACTUSPAGE=()=>{
 
         BUTTON(ELEMENT,"WhatsApp",TEAL,(ELSE)=>{
 
+            CLICK(ELSE,()=>{
+
+               WHATSAPP("+256781500455");
+
+            });
+
         });
 
         BREAK(ELEMENT);
 
         BUTTON(ELEMENT,"FaceBook",TEAL,(ELSE)=>{
 
+            CLICK(ELSE,()=>{
+
+               FACEBOOK("qelmedistore");
+
+            });
+
         });
 
         BREAK(ELEMENT);
-
-        BUTTON(ELEMENT,"Email",TEAL,(ELSE)=>{
-
-        });
 
     });
 

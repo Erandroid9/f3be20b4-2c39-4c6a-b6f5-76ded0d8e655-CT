@@ -338,3 +338,12 @@ const BREAK=(HOLDER)=>{
     });
 
 };
+const LINE=(HOLDER,APPEARANCE)=>{
+
+    ELEMENTED(HOLDER,"hr",(ELEMENT)=>{
+
+        BACKGROUND(ELEMENT,APPEARANCE);
+
+    });
+
+};
