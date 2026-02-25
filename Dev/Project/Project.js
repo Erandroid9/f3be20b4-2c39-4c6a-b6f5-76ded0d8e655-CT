@@ -979,6 +979,6 @@ const MOBILECONTACTUSPAGE=()=>{
 
 const DESKTOPVIEW=()=>{
 
-    CLEARNAV();
+    MOBILEVIEW();
 
 };
