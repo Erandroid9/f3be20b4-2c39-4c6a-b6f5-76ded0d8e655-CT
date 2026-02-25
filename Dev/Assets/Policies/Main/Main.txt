@@ -1,2 +1,5 @@
 <h1>Introduction</h1>
-<p>Welcome to Erandix and We are Honoured to Have You on Our Platform</p>
+<p>Welcome to Erandix and We are Honoured to Have You on Our Platform.</p>
+<h3>Who?</h3>
+<p>Erandix is a Software Development Company that Develops Websites,Mobile Apps,Desktop Software and Company Systems for Both Whole Scale Use and Small Scale Use.</p>
+<p>We have Worked with many parthners around the globe to get there companies to the feet out of debt to seeing profits with our tested and trusted methods of service delivery that is not compared.</p>
