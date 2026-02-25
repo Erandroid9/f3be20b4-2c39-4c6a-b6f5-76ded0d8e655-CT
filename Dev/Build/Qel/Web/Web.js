@@ -375,9 +375,11 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                                 QELPAY(Number(sessionStorage.getItem("Amount")),Data.ProductName,"",(DataLink)=>{
 
-                                    DISPLAYHIDDEN(LOADSER);
+                                    IFRAME(ELSESS,DataLink,()=>{
 
-                                    WEBSITE(DataLink);
+                                        DISPLAYHIDDEN(LOADSER);
+
+                                    });
 
                                 });
                                 
@@ -977,6 +979,6 @@ const MOBILECONTACTUSPAGE=()=>{
 
 const DESKTOPVIEW=()=>{
 
-    CLEARNAV();
+    MOBILEVIEW();
 
 };
