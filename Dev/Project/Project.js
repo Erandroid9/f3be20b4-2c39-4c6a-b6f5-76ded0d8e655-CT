@@ -242,13 +242,13 @@ const MOBILECONTACTUS=()=>{
 
         BREAK(ELEMENT);
 
-        ROUNDINPUTVIEW(ELEMENT,"email","Enter Your Email","Name",()=>{
+        ROUNDINPUTVIEW(ELEMENT,"email","Enter Your Email","Email",()=>{
 
         });
 
         BREAK(ELEMENT);
 
-        ROUNDINPUTVIEW(ELEMENT,"","Subject Of Message","Name",()=>{
+        ROUNDINPUTVIEW(ELEMENT,"","Subject Of Message","Subject",()=>{
 
         });
 
@@ -260,7 +260,29 @@ const MOBILECONTACTUS=()=>{
 
         BREAK(ELEMENT);
 
-        BUTTON(ELEMENT,"Submit",FORESTGREEN,()=>{
+        BUTTON(ELEMENT,"Submit",FORESTGREEN,(ELSEE)=>{
+
+            CLICK(ELSEE,()=>{
+
+                TOASTCONDITION(sessionStorage.getItem("Name"),"Enter Your Name",()=>{
+
+                    TOASTCONDITION(sessionStorage.getItem("Email"),"Enter Your Email",()=>{
+
+                        TOASTCONDITION(sessionStorage.getItem("Subject"),"Enter Your Subject",()=>{
+
+                            TOASTCONDITION(sessionStorage.getItem("Message"),"Compose The Message",()=>{
+
+                                TOASTVIEW("Please Wait");
+
+                            });    
+    
+                        });    
+
+                    });
+
+                });
+
+            });
 
         });
 
@@ -341,5 +363,7 @@ const DESKTOPVIEW=()=>{
     },()=>{
 
     });
+
+    CLEARNAV();
 
 };
