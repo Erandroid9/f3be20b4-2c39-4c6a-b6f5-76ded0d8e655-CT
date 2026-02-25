@@ -304,6 +304,18 @@ const MOBILEPOLICY=()=>{
 
     },(ELEMENT)=>{
 
+        LOADERVIEW(ELEMENT,(LOAD)=>{
+
+            SERVERASSETS("Policies/Main/Main.txt",(Data)=>{
+
+                DISPLAYHIDDEN(LOAD);
+
+                DISPLAY(ELEMENT,Data);
+
+            });
+
+        });
+
     });
 
 };
