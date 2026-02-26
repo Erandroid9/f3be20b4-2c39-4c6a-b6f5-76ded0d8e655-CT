@@ -1,0 +1,56 @@
+const PITCHPAGE=`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erandix Software Solutions</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="Holder">
+    <img src="https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/Icons/Erandix/android/icon.png" alt="Company Logo"/>
+    
+    <h1>Welcome to Erandix</h1>
+    <p>
+      At <strong>Erandix Software Solutions</strong>, we specialize in building innovative digital products 
+      that empower businesses to grow, streamline operations, and maximize profits. 
+      Our mission is simple: <em>turn your ideas into powerful solutions that delight your customers.</em>
+    </p>
+    
+    <h2>Our Services</h2>
+    <div class="InlineDiv">
+      <div class="DataHolder">
+        <img class="ImgHolder" src="https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/Images/WebDevelopment.webp" alt="Website Development"/>
+        <p class="Name">Website Development</p>
+        <a  id="VB" class="VistButton" href="https://erandix.site"><p class="NameHolder" >Book Now</p></a>
+      </div>
+      
+      <div class="DataHolder">
+        <img class="ImgHolder" src="https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/Images/AppDevelopment.webp" alt="Mobile Development"/>
+        <p class="Name">Mobile Development</p>
+        <a id="VB" class="VistButton" href="https://erandix.site"><p class="NameHolder" >Book Now</p></a>
+      </div>
+      
+      <div class="DataHolder">
+        <img class="ImgHolder" src="https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/Images/DesktopDevelopment.png" alt="Desktop Development"/>
+        <p class="Name">Desktop Development</p>
+        <a id="VB" class="VistButton" href="https://erandix.site"><p class="NameHolder">Book Now</p></a>
+      </div>
+      
+      <div class="DataHolder">
+        <img class="ImgHolder" src="https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/Images/SystemDevelopment.webp" alt="System Development"/>
+        <p class="Name">System Development</p>
+        <a id="VB" class="VistButton" href="https://erandix.site"><p class="NameHolder">Book Now</p></a>
+      </div>
+    </div>
+
+    <p>For More Information About Erandix,Please Click the Button Below.</p>
+    
+    <a class="VistButton" href="https://erandix.site"><p class="NameHolder" >Visit Our Site</p></a>
+    <br><br><br>
+    <p class="Rights">&copy; 2026 Erandix . All rights reserved.</p>
+  </div>
+</body>
+</html>
+`;
