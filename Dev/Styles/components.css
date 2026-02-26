@@ -1,7 +1,24 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
 body{
+    position: fixed;
+    background: transparent;
     text-align: center;
+    color: white;
+    font-family: Cambria;
+    display: block;
+
 }
 
 h1{
     font-size: 30px;
 }
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
