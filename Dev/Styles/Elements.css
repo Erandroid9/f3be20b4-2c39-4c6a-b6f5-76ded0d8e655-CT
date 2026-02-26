@@ -1,24 +1,3 @@
-.InlineDiv{
-    position: relative;
-    width: 95%;
-    height: 300px;
-    background: transparent;
-    margin: 2%;
-    display: inline-flex;
-    overflow-y: hidden;
-    overflow-x: auto;
-}
-
-.DataHolder{
-    position: relative;
-    height: 280px;
-    width: 70%;
-    background: transparent;
-    margin: 2%;
-    flex-shrink: 0;
-    display: block;
-}
-
 .Holder{
     position: fixed;
     width: 100%;
@@ -33,13 +12,35 @@
     background: black;
 }
 
+.InlineDiv{
+    position: relative;
+    width: 95%;
+    height: 500px;
+    background: transparent;
+    margin: 2%;
+    display: inline-flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.DataHolder{
+    position: relative;
+    height: 90%;
+    width: 70%;
+    background: transparent;
+    margin: 2%;
+    flex-shrink: 0;
+    display: block;
+}
+
+
 .VistButton{
-    width: 80%;
+    width: 90%;
     height: 50px;
     background: forestgreen;
-    padding: 5%;
     margin: 5%;
-    display: block;
+    left: 0;
+    display: inline-flex;
     text-align: center;
 }
 
@@ -56,7 +57,6 @@
     position: absolute;
     bottom: 10px;
     padding: 0;
-    left: 5%;
     border-radius: 10px;
     background: forestgreen;
 }
@@ -69,5 +69,17 @@
     background: whitesmoke;
     text-align: center;
     padding: 5%;
+    margin: 0;
     border-radius: 0px 10px 10px 0px;
+}
+
+.NameHolder{
+    text-align: center;
+    padding: 0;
+    margin: auto;
+}
+
+.Rights{
+    text-align: center;
+    color: forestgreen;
 }
