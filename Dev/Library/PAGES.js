@@ -5,7 +5,7 @@ const PITCHPAGE=`
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erandix Software Solutions</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Styles/main.css">
 </head>
 <body>
   <div class="Holder">
