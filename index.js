@@ -1,19 +1,15 @@
-export const CONNECTIONS=()=>{
+export const CONNECTIONS = () => {
 
     STYLESDOWNLOAD();
-
     ASSETSCONNECTION();
-
     PRODUCTIONMODE();
 
     if (!localStorage.getItem("Packaged")) {
         
         const style = document.createElement("style");
-
         document.head.appendChild(style);
 
         style.innerHTML = `
-
             .box{
                 position:fixed;
                 overflow:hidden;
@@ -28,7 +24,6 @@ export const CONNECTIONS=()=>{
                 box-shadow:0 0 25px rgba(0,255,179,0.3);
                 font-family:Arial, sans-serif;
             }
-
             .spinner{
                 width:50px;
                 height:50px;
@@ -38,11 +33,9 @@ export const CONNECTIONS=()=>{
                 border-radius:50%;
                 animation:spin .5s linear infinite;
             }
-
             @keyframes spin{
                 100%{transform:rotate(360deg);}
             }
-
             .progress{
                 height:6px;
                 width:80%;
@@ -52,69 +45,47 @@ export const CONNECTIONS=()=>{
                 margin-top:20px;
                 overflow:hidden;
             }
-
             .bar{
                 height:100%;
                 width:0%;
                 background:#00ffb3;
                 transition:width .4s;
             }
-
             .small{
                 font-size:13px;
                 opacity:.7;
                 margin-top:10px;
             }
-
             .Name{
                 margin-top:25%;
             }
-                
         `;
 
-        const Body=document.querySelector("body");
-
-        Body.innerHTML=`
-
+        const Body = document.querySelector("body");
+        Body.innerHTML = `
             <div class="box">
-
                 <h2 class="Name">CONFIGURING</h2>
-
                 <br><br>
-
                 <div class="spinner"></div>
-
                 <br><br>
-
                 <div id="msg">Connecting to secure server...</div>
-
                 <br><br>
-
                 <div class="progress">
-
                     <div class="bar" id="bar"></div>
-
                 </div>
-
                 <br><br>
-
-                <div class="small">Please Wait,Configuration In Progress</div>
-
-                <br><br>
-                <br><br>
-
+                <div class="small">Please Wait, Configuration In Progress</div>
+                <br><br><br><br>
                 <p class="small">Version One</p>
-
             </div>
-
         `;
 
-        const messages=[
-        "Establishing encrypted connection...",
-        "Fetching live data from server...",
-        "Verifying system integrity...",
-        "Installing...",
-        "System Ready ✔"
+        const messages = [
+            "Establishing encrypted connection...",
+            "Fetching live data from server...",
+            "Verifying system integrity...",
+            "Installing...",
+            "System Ready ✔"
         ];
 
         let i = 0, progress = 0;
@@ -132,15 +103,22 @@ export const CONNECTIONS=()=>{
         }
         setTimeout(load, 1000);
 
-        setTimeout(() => {
-
-            if (!localStorage.getItem("FrameWorkError")) {
-
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'PROJECT' && event.newValue !== null) {
                 location.reload();
-                
-            };
+            }
+        });
 
-        }, 10000);
+        (function() {
+            const originalSetItem = localStorage.setItem;
+            localStorage.setItem = function(key, value) {
+                originalSetItem.apply(this, arguments);
+                if (key === 'PROJECT' && value !== null) {
+                    location.reload();
+                }
+            };
+        })();
+
     };
 
 };
