@@ -12,7 +12,6 @@ ROUTEJS(localStorage.getItem("RUN"));
 ROUTEJS(localStorage.getItem("ANDROIDPAGES"));
 ROUTEJS(localStorage.getItem("DESKTOPPAGES"));
 ROUTEJS(localStorage.getItem("WEBPAGES"));
-ROUTEJS(localStorage.getItem("PAGES"));
 ROUTEJS(localStorage.getItem("PLUGINS"));
 ROUTEJS(localStorage.getItem("PROJECTANDROID"));
 ROUTEJS(localStorage.getItem("PROJECTWEB"));
