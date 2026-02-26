@@ -358,3 +358,26 @@ const MJOMBAALIDIRECTMESSAGE=()=>{
     });
 
 };
+const EMAILHTMLSERVER=(EMAIL,SUBJECT,MESSAGE,callBack)=>{
+
+    const DATA={
+        "recipient":EMAIL,
+        "subject":SUBJECT,
+        "body":MESSAGE
+    };
+
+    CLOUDPOST(EMAILDATAIMAGELINK,DATA,(Data)=>{
+
+        CONDITION(Data.status === "success",()=>{
+
+            callBack(Data);
+
+        },()=>{
+
+            TOASTVIEW("Invalid Email Provided");
+
+        });
+
+    });
+
+};
