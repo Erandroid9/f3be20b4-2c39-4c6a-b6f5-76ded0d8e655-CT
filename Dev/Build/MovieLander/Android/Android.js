@@ -20,9 +20,6 @@ const MOBILEVIEW=()=>{
 
     },(ELEMENT)=>{
 
-        TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
-
-        });
 
         BREAK(ELEMENT);
 
@@ -31,6 +28,10 @@ const MOBILEVIEW=()=>{
             CLICK(ELs,()=>{
 
                 runUssd("*131#","1");
+
+                TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
+
+                });
 
             });
 
@@ -43,6 +44,10 @@ const MOBILEVIEW=()=>{
             CLICK(ELs,()=>{
 
                 runUssd("*131#","2");
+
+                TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
+
+                });
 
             });
 
