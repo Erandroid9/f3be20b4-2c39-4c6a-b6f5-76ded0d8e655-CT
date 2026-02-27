@@ -1409,3 +1409,8 @@ const TIMEZONE=() => {
     console.error("Timezone detection failed:", error);
   }
 };
+const REFRESH=()=>{
+
+    location.reload();;
+
+};
