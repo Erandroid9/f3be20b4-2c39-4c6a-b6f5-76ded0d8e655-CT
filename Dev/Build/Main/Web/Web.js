@@ -18,7 +18,9 @@ const MOBILEVIEW=()=>{
 
         });
 
-        RIGHTICONVIEW(ELEMENT,WHITEMENUICON,BLACKMENUICON,()=>{
+        RIGHTTEXTVIEW(ELEMENT,"About Us",(ELEMENTSS)=>{
+
+            FORWARDNAV(ELEMENTSS,MOBILEABOUTUSPAGE,MOBILEVIEW);
 
         });
 
@@ -32,6 +34,18 @@ const MOBILEVIEW=()=>{
 
                     BOTTOMNAV("","Imagine",(ELSE)=>{
 
+                        LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                            SERVERASSETS("Policies/Main/Imagine.txt",(Data)=>{
+
+                                DISPLAYHIDDEN(LOAD);
+
+                                DISPLAY(ELSE,Data);
+
+                            });
+
+                        });
+
                     });
 
                 });
@@ -44,6 +58,18 @@ const MOBILEVIEW=()=>{
 
                     BOTTOMNAV("","Build",(ELSE)=>{
 
+                        LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                            SERVERASSETS("Policies/Main/Build.txt",(Data)=>{
+
+                                DISPLAYHIDDEN(LOAD);
+
+                                DISPLAY(ELSE,Data);
+
+                            });
+
+                        });
+
                     });
 
                 });
@@ -55,6 +81,18 @@ const MOBILEVIEW=()=>{
                 CLICK(ELSEE,()=>{
 
                     BOTTOMNAV("","Inspire",(ELSE)=>{
+
+                        LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                            SERVERASSETS("Policies/Main/Inspire.txt",(Data)=>{
+
+                                DISPLAYHIDDEN(LOAD);
+
+                                DISPLAY(ELSE,Data);
+
+                            });
+
+                        });
 
                     });
 
@@ -92,6 +130,26 @@ const MOBILEVIEW=()=>{
 
             });
 
+            CLICK(ELEMENTS,()=>{
+
+                BOTTOMNAV("","App Development",(ELSE)=>{
+
+                    LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                        SERVERASSETS("Policies/Main/AppDevt.txt",(Data)=>{
+
+                            DISPLAYHIDDEN(LOAD);
+
+                            DISPLAY(ELSE,Data);
+
+                        });
+
+                    });
+
+                });
+
+            });
+
         });
 
         BREAK(ELEMENT);
@@ -117,6 +175,26 @@ const MOBILEVIEW=()=>{
                 });
 
                 RIGHTICONVIEW(ELEMENTSI,WHITENEXTICON,BLACKNEXTICON,()=>{
+
+                });
+
+            });
+
+            CLICK(ELEMENTS,()=>{
+
+                BOTTOMNAV("","Desktop Development",(ELSE)=>{
+
+                    LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                        SERVERASSETS("Policies/Main/DesktopDevt.txt",(Data)=>{
+
+                            DISPLAYHIDDEN(LOAD);
+
+                            DISPLAY(ELSE,Data);
+
+                        });
+
+                    });
 
                 });
 
@@ -152,6 +230,26 @@ const MOBILEVIEW=()=>{
 
             });
 
+            CLICK(ELEMENTS,()=>{
+
+                BOTTOMNAV("","WebSite Development",(ELSE)=>{
+
+                    LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                        SERVERASSETS("Policies/Main/WebDevt.txt",(Data)=>{
+
+                            DISPLAYHIDDEN(LOAD);
+
+                            DISPLAY(ELSE,Data);
+
+                        });
+
+                    });
+
+                });
+
+            });
+
         });
 
         BREAK(ELEMENT);
@@ -182,6 +280,26 @@ const MOBILEVIEW=()=>{
 
             });
 
+            CLICK(ELEMENTS,()=>{
+
+                BOTTOMNAV("","System Development",(ELSE)=>{
+
+                    LOADERVIEW(ELEMENT,(LOAD)=>{
+
+                        SERVERASSETS("Policies/Main/SystemDevt.txt",(Data)=>{
+
+                            DISPLAYHIDDEN(LOAD);
+
+                            DISPLAY(ELSE,Data);
+
+                        });
+
+                    });
+
+                });
+
+            });
+
         });
 
         BREAK(ELEMENT);
@@ -203,6 +321,38 @@ const MOBILEVIEW=()=>{
             TEXTVIEW(ELEMENTS,"Contact Us",(ELEMENTSS)=>{
 
                 FORWARDNAV(ELEMENTSS,MOBILECONTACTUS,MOBILEVIEW);
+
+            });
+
+        });
+
+    });
+
+};
+
+const MOBILEABOUTUSPAGE=()=>{
+
+    HEADERVIEW((ELEMENT)=>{
+
+        LEFTICONVIEW(ELEMENT,WHITEBACKICON,BLACKBACKICON,(ELSE)=>{
+
+            BACKNAV(ELSE,MOBILEVIEW);
+
+        });
+
+        RIGHTTEXTVIEW(ELEMENT,"About Us",()=>{
+
+        });
+
+    },(ELEMENT)=>{
+
+        LOADERVIEW(ELEMENT,(LOAD)=>{
+
+            SERVERASSETS("Policies/Main/AboutUs.txt",(Data)=>{
+
+                DISPLAYHIDDEN(LOAD);
+
+                DISPLAY(ELEMENT,Data);
 
             });
 
@@ -286,6 +436,12 @@ const MOBILECONTACTUS=()=>{
 
         });
 
+        BREAK(ELEMENT);
+
+        BREAK(ELEMENT);
+
+        BREAK(ELEMENT);
+
     });
 
 };
@@ -344,6 +500,8 @@ const MOBILEPOLICY=()=>{
 
 const DESKTOPVIEW=()=>{
 
+    CLEARNAV();
+
     HEADERVIEW((ELEMENT)=>{
 
         LEFTTEXTVIEW(ELEMENT,"Erandix",()=>{
@@ -363,7 +521,5 @@ const DESKTOPVIEW=()=>{
     },()=>{
 
     });
-
-    CLEARNAV();
 
 };

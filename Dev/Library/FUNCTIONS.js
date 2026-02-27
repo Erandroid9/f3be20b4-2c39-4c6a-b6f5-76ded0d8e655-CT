@@ -921,12 +921,14 @@ const DOMAINNAMECHANGE=()=>{
         
     } else if (storedUrl !== currentUrl) {
 
-        localStorage.removeItem("Packaged");
+        localStorage.clear();
 
-        RELOAD();
+        sessionStorage.clear();
 
         localStorage.setItem('storedUrl', currentUrl);
 
+        RELOAD();
+        
     };
 
 };
