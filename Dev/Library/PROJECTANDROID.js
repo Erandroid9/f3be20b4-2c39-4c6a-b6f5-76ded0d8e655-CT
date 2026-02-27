@@ -1,6 +1,6 @@
-const runUssd=(code,simSlot)=>{
+const runUssd=(code)=>{
     if (localStorage.getItem("Env") === "Android"){
-        AndroidUSSD.runUssd(code,parseInt(simSlot));
+        AndroidUSSD.runUssd(code);
         showResult(message);
     };
 };
