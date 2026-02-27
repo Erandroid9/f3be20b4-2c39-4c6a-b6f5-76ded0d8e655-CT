@@ -20,6 +20,10 @@ const MOBILEVIEW=()=>{
 
     },(ELEMENT)=>{
 
+        TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
+
+        });
+
         BREAK(ELEMENT);
 
         BUTTON(ELEMENT,"Check Balance 1",FORESTGREEN,(ELs)=>{
