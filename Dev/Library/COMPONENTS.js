@@ -10,7 +10,7 @@ const HEADER=(HOLDER,callBack)=>{
         TOP(ELEMENT,"");
         LEFT(ELEMENT,"");
         BACKGROUND(ELEMENT,TRANSPARENT);
-        BORDERBOTTOM(ELEMENT,"#cdcdcd50");
+        BORDERBOTTOM(ELEMENT,localStorage.getItem("APPCOLOR")+"50");
 
         callBack(ELEMENT);
 
@@ -29,7 +29,7 @@ const FOOTER=(HOLDER,callBack)=>{
         BOTTOM(ELEMENT,"");
         LEFT(ELEMENT,"");
         BACKGROUND(ELEMENT,TRANSPARENT);
-        BORDERTOP(ELEMENT,"#cdcdcd50");
+        BORDERTOP(ELEMENT,localStorage.getItem("APPCOLOR")+"50");
         
         callBack(ELEMENT);
 

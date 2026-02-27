@@ -6,7 +6,11 @@ const ERANDES=()=>{
 
 const MOBILEVIEW=()=>{
 
-    HEADERV
+    HEADERVIEW((ELEMENT)=>{
+
+    },(ELEMENT)=>{
+
+    });
 
 };
 
