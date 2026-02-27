@@ -8,18 +8,8 @@ const MOBILEVIEW=()=>{
 
     HEADERVIEW((ELEMENT)=>{
 
-        TEXTVIEW(ELEMENT,"Data",(ES)=>{
-
-            CLICK(ES,()=>{
-
-                REFRESH();
-
-            });
-
-        });
 
     },(ELEMENT)=>{
-
 
         BREAK(ELEMENT);
 
@@ -28,10 +18,6 @@ const MOBILEVIEW=()=>{
             CLICK(ELs,()=>{
 
                 runUssd("*131#","1");
-
-                TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
-
-                });
 
             });
 
@@ -44,10 +30,6 @@ const MOBILEVIEW=()=>{
             CLICK(ELs,()=>{
 
                 runUssd("*131#","2");
-
-                TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
-
-                });
 
             });
 

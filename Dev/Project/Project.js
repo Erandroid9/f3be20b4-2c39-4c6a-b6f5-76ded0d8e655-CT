@@ -8,21 +8,8 @@ const MOBILEVIEW=()=>{
 
     HEADERVIEW((ELEMENT)=>{
 
-        TEXTVIEW(ELEMENT,"Data",(ES)=>{
-
-            CLICK(ES,()=>{
-
-                REFRESH();
-
-            });
-
-        });
 
     },(ELEMENT)=>{
-
-        TEXTVIEW(ELEMENT,sessionStorage.getItem("AndroidSms"),()=>{
-
-        });
 
         BREAK(ELEMENT);
 
