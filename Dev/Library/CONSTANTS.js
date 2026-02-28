@@ -1,4 +1,7 @@
+const COMPANYNAME="Erandix";
+const COMPANYLINK="https://erandix.site";
 const BODY=document.querySelector('body');
+const MUSICSERVERLINK="https://musix-f65ecb.gitlab.io";
 const CONNECTIONLINK="https://script.google.com/macros/s/AKfycbwZEAGqW4mUEfbSxG2qvWjmXi2phy64VsOPCEWKWixnmR4WMYuYSY57hOsEZPsMBLAx/exec";
 const CREATEDATABASELINK="https://script.google.com/macros/s/AKfycbxb0WsWUy_1XvGywrLi2PjkBLHpDTBmHu1TCkW9YF08E6Oq30GvJQWZsR3O_xfBUOA/exec";
 const CREATETABLELINK="https://script.google.com/macros/s/AKfycbzZhZWViWmnLY6b0Admgvtc1NFb51CggGARdmLqc33oMCMuZ8H4Itt-RKFRJyVHXRdL/exec";
@@ -8,9 +11,6 @@ const GETDATALINK="https://script.google.com/macros/s/AKfycbxgaFqwexOOBXA5tn1n2M
 const EMAILLINK="https://script.google.com/macros/s/AKfycbzyfkM3s5iMsX6_Xib2szoe50TEn55lsNV71wXvS6WBbiFjde7DyAG5oE8NXEPFfCxe/exec";
 const ERANDIXAPILINK="https://docs.google.com/spreadsheets/d/1PP-bsio02iir_lpUjfUFf481Ctir1I3vAUK5jtxeClE/edit?usp=sharing";
 const ERANDIXMANAGERLINK="https://docs.google.com/spreadsheets/d/1V_m4KRo--FQkD0fNKfRZ1EWDRCSqTvwGkM7lEFGWldA/edit?usp=sharing";
-const MUSICSERVERLINK="https://musix-f65ecb.gitlab.io";
-const COMPANYNAME="Erandix";
-const COMPANYLINK="https://erandix.site";
 const TOKENIZATIONLINK="https://script.google.com/macros/s/AKfycbyOAu0o81D-Jcn-OBKUqckH78eq9qEsrTgC1nX2YjH7pLmVbnNx5h_uFtg3uT_ASO63/exec";
 const IPNIZATIONLINK="https://script.google.com/macros/s/AKfycbwoLarWG5g2gtx-sehv8INXyuSizx4lT7VFP7ZkgXRtwGOpIsCfFdT_Jpzi5zDy93v7/exec";
 const SUBMIZATIONLINK="https://script.google.com/macros/s/AKfycbwqX3IqPY0C2wH_DHE4Y9wO010tiKvsjetijTtMA-cBIXfvJ8Y35xgmpu1a2EpmWojv/exec";

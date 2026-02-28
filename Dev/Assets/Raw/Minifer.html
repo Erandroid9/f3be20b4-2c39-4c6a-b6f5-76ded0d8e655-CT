@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Format Converter</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        resize: vertical;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .convert-btn { background: #4CAF50; }
+    .convert-btn:hover { background: #45a049; }
+
+    .copy-btn { background: #2196F3; }
+    .copy-btn:hover { background: #1e88e5; }
+
+    .clear-btn { background: #f44336; }
+    .clear-btn:hover { background: #e53935; }
+
+    .toggle-btn { background: #9C27B0; }
+    .toggle-btn:hover { background: #8e24aa; }
+
+    .success {
+        text-align: center;
+        color: green;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .mode-indicator {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    Text Format Converter
+</header>
+
+<div class="container">
+
+    <div class="mode-indicator" id="modeIndicator">
+        Current Mode: Single Line
+    </div>
+
+    <textarea id="inputText" placeholder="Paste or type text here..."></textarea>
+
+    <button class="convert-btn" onclick="convertText()">Convert</button>
+
+    <button class="toggle-btn" onclick="toggleMode()">Switch to Multi Line Mode</button>
+
+    <textarea id="outputText" placeholder="Result will appear here..."></textarea>
+
+    <button class="copy-btn" onclick="copyOutput()">Copy Output</button>
+
+    <button class="clear-btn" onclick="clearAll()">Clear All</button>
+
+    <div id="copyMessage" class="success"></div>
+
+</div>
+
+<script>
+let isSingleLine = true;
+
+function convertText() {
+    let input = document.getElementById("inputText").value;
+    let output;
+
+    if (isSingleLine) {
+        // Convert to single line
+        output = input.replace(/\s+/g, ' ').trim();
+    } else {
+        // Convert to multiline (restore line breaks if pasted single line)
+        output = input.replace(/ +/g, '\n').trim();
+    }
+
+    document.getElementById("outputText").value = output;
+}
+
+function toggleMode() {
+    isSingleLine = !isSingleLine;
+
+    const indicator = document.getElementById("modeIndicator");
+    const toggleButton = document.querySelector(".toggle-btn");
+
+    if (isSingleLine) {
+        indicator.innerText = "Current Mode: Single Line";
+        toggleButton.innerText = "Switch to Multi Line Mode";
+    } else {
+        indicator.innerText = "Current Mode: Multi Line";
+        toggleButton.innerText = "Switch to Single Line Mode";
+    }
+}
+
+function copyOutput() {
+    let outputText = document.getElementById("outputText");
+
+    if (!outputText.value) {
+        alert("Nothing to copy!");
+        return;
+    }
+
+    navigator.clipboard.writeText(outputText.value);
+
+    document.getElementById("copyMessage").innerText = "Copied to clipboard!";
+
+    setTimeout(() => {
+        document.getElementById("copyMessage").innerText = "";
+    }, 2000);
+}
+
+function clearAll() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("outputText").value = "";
+    document.getElementById("copyMessage").innerText = "";
+}
+</script>
+
+</body>
+</html>
