@@ -124,7 +124,7 @@ export const CONNECTIONS = () => {
 };
 
 const ASSETSCONNECTION=()=>{
-    fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Library/ASSETS.js")
+    fetch("https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Library/ASSETS.js")
     .then(res =>res.text())
     .then(data=>{
         localStorage.setItem("ASSETS",data);
@@ -307,7 +307,7 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
 
                 if (localStorage.getItem("Env") === "Desktop" ) {
 
-                    fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.DESKTOP)
+                    fetch("https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.DESKTOP)
                     .then(res =>res.text())
                     .then(data=>{
                             if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
@@ -329,7 +329,7 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
 
                     if (localStorage.getItem("Env") === "Android") {
 
-                        fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.ANDROID)
+                        fetch("https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.ANDROID)
                         .then(res =>res.text())
                         .then(data=>{
                             if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
@@ -349,7 +349,7 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
                         
                     } else {
 
-                        fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.WEB)
+                        fetch("https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Build/"+User.WEB)
                         .then(res =>res.text())
                         .then(data=>{                          
                             if (data === localStorage.getItem("PROJECT")&&localStorage.getItem("PROJECT")) {
@@ -459,7 +459,7 @@ const PROJECTFETCH = (DIRECTLINK, DATABASE) => {
 };
 
 const STYLESDOWNLOAD=()=>{
-    fetch("https://erandroid9.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/index.css")
+    fetch("https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/index.css")
     .then(res =>res.text())
     .then(data =>{
         localStorage.setItem("APPCSS",data);
