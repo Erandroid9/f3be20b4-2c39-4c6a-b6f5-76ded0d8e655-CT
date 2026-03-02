@@ -1,1 +1,28 @@
-<h1>inspire</h1>
+<section id="inspire-erandix">
+  <div class="container">
+    <h1>✨ Inspire the Future</h1>
+    <p>
+      Building is powerful — but inspiring others to follow is transformational. 
+      At <strong>Erandix</strong>, we don’t just create solutions; we set trends, 
+      spark movements, and empower communities to dream bigger.
+    </p>
+    
+    <h2>🌟 Lead by Example</h2>
+    <p>
+      Every product we deliver becomes more than a tool — it’s a story others want 
+      to be part of. By turning imagination into innovation, we inspire businesses, 
+      teams, and individuals to push boundaries and embrace possibility.
+    </p>
+    
+    <h2>🔥 The Ripple Effect</h2>
+    <ul>
+      <li><strong>Innovation that Spreads:</strong> Ideas built with Erandix become benchmarks others aspire to.</li>
+      <li><strong>Communities that Grow:</strong> Your success inspires networks, partners, and industries.</li>
+      <li><strong>Momentum that Lasts:</strong> Inspiration fuels continuous progress and lasting impact.</li>
+    </ul>
+    
+    <p class="tagline">
+      <em>You imagine. We build. And together, we inspire the world to follow.</em>
+    </p>
+  </div>
+</section>
