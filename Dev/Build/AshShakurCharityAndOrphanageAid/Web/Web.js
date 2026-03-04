@@ -798,6 +798,10 @@ const MOBILEVIEW=()=>{
             BREAK(ELEMENTS);
 
             BREAK(ELEMENTS);
+
+            TEXTVIEW(ELEMENTS,COPYRIGHT+"ASCOA 2026",()=>{
+
+            });
             
             BREAK(ELEMENTS);
 
@@ -1062,8 +1066,6 @@ const SUBJECTSECTION=()=>{
 
             });
 
-            BREAK(ELEMENT);
-
             INLINEVIEW(ELEMENTS,"95%","100px",TRANSPARENT,"2%",(ELEMENTS)=>{
 
                 OVERFLOWX(ELEMENTS);
@@ -1123,6 +1125,10 @@ const SUBJECTSECTION=()=>{
                     });
 
                 });
+
+            });
+
+            TEXTVIEW(ELEMENTS,COPYRIGHT+"ASCOA 2026",()=>{
 
             });
 
