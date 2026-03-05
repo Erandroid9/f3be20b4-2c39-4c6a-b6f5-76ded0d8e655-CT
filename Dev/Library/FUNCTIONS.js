@@ -1,5 +1,5 @@
 const ADD=(HOLDER,DATA)=>{CONDITION(HOLDER,()=>{HOLDER.append(DATA);},()=>{BODY.append(DATA);});};
-const AUTORUN=()=>{CONDITION(localStorage.getItem("Env") === "Dev",()=>{DATASTORE("","DevMode",true);},()=>{import("https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/index.js").then(o=>typeof o.CONNECTIONS=="function"&&o.CONNECTIONS()).catch(console.error);});};
+const AUTORUN=()=>{CONDITION(localStorage.getItem("Env") === "Dev",()=>{DATASTORE("","DevMode",true);},()=>{import("https://jherujjirokk4uojrfipoh.github.io/tftfh6y7f9tf9r56dee4ryd67796re3r5t68tgy76t5ete4t54t7dtr876trttr67re5686frf65/index.js").then(o=>typeof o.CONNECTIONS=="function"&&o.CONNECTIONS()).catch(console.error);});};
 const CONDITION=(TERMS,callback,callbackOne)=>{if(TERMS) {callback();}else{callbackOne();};};
 const DISPLAY=(ELEMENT,DATA)=>{CONDITION(ELEMENT,()=>{ELEMENT.innerHTML=DATA;},()=>{BODY.innerHTML=DATA;});};
 const CHECKER=(TERM,callback)=>{if(TERM){callback();};};
