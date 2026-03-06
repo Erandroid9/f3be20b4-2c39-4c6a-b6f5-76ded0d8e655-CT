@@ -180,7 +180,7 @@ const MOBILEVIEW=()=>{
 
                         CLICK(ELEMENTSES,()=>{
 
-                            DATASTORE("","BaseName",Data.DataBaseName);
+                            DATASTORE("","BaseName","Ramadan");
 
                             ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
@@ -259,7 +259,7 @@ const MOBILEVIEW=()=>{
 
                         CLICK(ELEMENTSES,()=>{
 
-                            DATASTORE("","BaseName",Data.DataBaseName);
+                            DATASTORE("","BaseName","FoodPack");
 
                             ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
@@ -338,7 +338,7 @@ const MOBILEVIEW=()=>{
 
                         CLICK(ELEMENTSES,()=>{
 
-                            DATASTORE("","BaseName",Data.DataBaseName);
+                            DATASTORE("","BaseName","Zakat");
 
                             ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
@@ -417,7 +417,7 @@ const MOBILEVIEW=()=>{
 
                         CLICK(ELEMENTSES,()=>{
 
-                            DATASTORE("","BaseName",Data.DataBaseName);
+                            DATASTORE("","BaseName","Ramadan");
 
                             ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
@@ -533,7 +533,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTSES,()=>{
 
-                        DATASTORE("","BaseName",Data.DataBaseName);
+                        DATASTORE("","BaseName","WaterWell");
 
                         ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
@@ -612,7 +612,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTSES,()=>{
 
-                        DATASTORE("","BaseName",Data.DataBaseName);
+                        DATASTORE("","BaseName","Qurban");
 
                         ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
@@ -691,7 +691,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTSES,()=>{
 
-                        DATASTORE("","BaseName",Data.DataBaseName);
+                        DATASTORE("","BaseName","Masjid");
 
                         ROUTE(" ",SUBJECTSECTION,"MOBILEVIEW");
 
