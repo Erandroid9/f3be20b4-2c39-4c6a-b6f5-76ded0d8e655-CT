@@ -37,6 +37,14 @@ const MOBILEVIEW=()=>{
 
             COLOR(ELEMENTS,WHITE);
 
+            CLICK(ELEMENTS,()=>{
+
+                BOTTOMNAV("","Donation",()=>{
+                            
+                });
+
+            });
+
         });
 
         RIGHTICONVIEW(ELEMENT,WHITEMENUICON,BLACKMENUICON,(ELEMENTS)=>{
@@ -237,6 +245,14 @@ const MOBILEVIEW=()=>{
 
                     COLOR(ELEMENTS,WHITE);
 
+                    CLICK(ELEMENTS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
+
                 });
 
             });
@@ -315,6 +331,14 @@ const MOBILEVIEW=()=>{
                     BOTTOM(ELEMENTS,"50px");
 
                     COLOR(ELEMENTS,WHITE);
+
+                    CLICK(ELEMENTS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
 
                 });
 
@@ -395,6 +419,14 @@ const MOBILEVIEW=()=>{
 
                     COLOR(ELEMENTS,WHITE);
 
+                    CLICK(ELEMENTS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
+
                 });
 
             });
@@ -473,6 +505,14 @@ const MOBILEVIEW=()=>{
                     BOTTOM(ELEMENTS,"50px");
 
                     COLOR(ELEMENTS,WHITE);
+
+                    CLICK(ELEMENTS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
 
                 });
 
@@ -553,6 +593,14 @@ const MOBILEVIEW=()=>{
 
                     COLOR(ELSSS,WHITE);
 
+                    CLICK(ELSSS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
+
                 });
 
             });
@@ -632,6 +680,15 @@ const MOBILEVIEW=()=>{
 
                     COLOR(ELSSS,WHITE);
 
+                    CLICK(ELSSS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
+
+
                 });
 
             });
@@ -710,6 +767,14 @@ const MOBILEVIEW=()=>{
                 TEXTVIEW(ELS,"Donate",(ELSSS)=>{
 
                     COLOR(ELSSS,WHITE);
+
+                    CLICK(ELSSS,()=>{
+
+                        BOTTOMNAV("","Donation",()=>{
+                            
+                        });
+
+                    });
 
                 });
 
@@ -1029,6 +1094,14 @@ const SUBJECTSECTION=()=>{
             RADIUS(ELEMENTS,"5px");
 
             COLOR(ELEMENTS,WHITE);
+
+            CLICK(ELEMENTS,()=>{
+
+                BOTTOMNAV("","Donation",()=>{
+                            
+                });
+
+            });
 
         });
 
