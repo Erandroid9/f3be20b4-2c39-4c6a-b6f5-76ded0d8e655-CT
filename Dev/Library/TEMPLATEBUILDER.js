@@ -1,7 +1,0 @@
-
-
-const CONTACTUSSERVER=(LINK)=>{
-
-    INSER
-
-};
