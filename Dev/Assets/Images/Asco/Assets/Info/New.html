@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://ashshakurcharity.org/Assets/logo.jpg" type="image/x-icon">
+  <title>Ash Shakur Charity and Orphanage Aid</title>
+</head>
+<style>
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.loading-container {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #333333;
+  border-top: 6px solid #00bfff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: #000000;
+}
+</style>
+<body>
+  <div class="loading-container">
+    <div>
+      <div class="spinner"></div>
+      <p class="loading-text">Please Wait</p>
+    </div>
+  </div>
+</body>
+<script>
+  localStorage.setItem('Environment', 'Web');
+  localStorage.setItem('NAME', '8e66d79d-84b7-4ba0-9d60-0e74189657483459');
+  const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
+  const ROUTECSS=(DATA)=>{ const styleElement = document.createElement("style"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
+  ROUTEJS(localStorage.getItem('NOVA'));
+  ROUTECSS(localStorage.getItem('NOVASTYLES'));
+  const CloudShipping = () => {
+  import('https://eliterobustontology.github.io/FrameWork/Start/Start.js')
+  .then(module => {
+    if (typeof module.START === 'function') {
+        module.START();
+      } else {
+        console.error('START is not defined in the module');
+      }
+    })
+    .catch(error => {
+      console.error('Error loading the module:', error);
+    });
+  };
+  if (localStorage.getItem('Updates')) {
+    NOVASTART();
+    } else {
+    CloudShipping();
+  };
+</script>
+</html>
