@@ -1,5 +1,50 @@
 const ERANDES=()=>{
 
+    const LinkData = [
+        {"Name":"Facebook","Link":"https://www.facebook.com/share/188Uyj5rGJ/"},
+        {"Name":"Instagram","Link":"ash_shakur_charity_"},
+        {"Name":"TikTok","Link":"ashshakurcharity1"},
+        {"Name":"Twitter","Link":"AshShakur41402"},
+        {"Name":"X","Link":"AshShakur41402"},
+        {"Name":"YouTube","Link":""},
+        {"Name":"LinkedIn","Link":""},
+        {"Name":"WhatsApp","Link":"+256789467876"},
+        {"Name":"Telegram","Link":""},
+        {"Name":"Snapchat","Link":""},
+        {"Name":"Pinterest","Link":""},
+        {"Name":"Reddit","Link":""},
+        {"Name":"Discord","Link":""},
+        {"Name":"Threads","Link":""},
+        {"Name":"Tumblr","Link":""},
+        {"Name":"Quora","Link":""},
+        {"Name":"Twitch","Link":""},
+        {"Name":"Vimeo","Link":""},
+        {"Name":"Dailymotion","Link":""},
+        {"Name":"Medium","Link":""},
+        {"Name":"Blogger","Link":""},
+        {"Name":"WordPress","Link":""},
+        {"Name":"SoundCloud","Link":""},
+        {"Name":"Spotify","Link":""},
+        {"Name":"Bandcamp","Link":""},
+        {"Name":"Flickr","Link":""},
+        {"Name":"Behance","Link":""},
+        {"Name":"Dribbble","Link":""},
+        {"Name":"GitHub","Link":""},
+        {"Name":"GitLab","Link":""},
+        {"Name":"StackOverflow","Link":""},
+        {"Name":"WeChat","Link":""},
+        {"Name":"Line","Link":""},
+        {"Name":"Signal","Link":""},
+        {"Name":"KakaoTalk","Link":""},
+        {"Name":"Clubhouse","Link":""},
+        {"Name":"Mastodon","Link":""},
+        {"Name":"Rumble","Link":""},
+        {"Name":"Kick","Link":""},
+        {"Name":"Substack","Link":""}
+    ];
+
+    LINKSTORAGE(LinkData);
+
     DOWNLOADSAVEINDEX(ASCODATABASELINK,"Catergory",()=>{
 
     },()=>{
@@ -836,7 +881,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        WEBSITE("https://www.facebook.com/share/188Uyj5rGJ/");
+                       WEBSITE(sessionStorage.getItem("Facebook"));
 
                     });
 
@@ -850,7 +895,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        INSTAGRAM("ash_shakur_charity_");
+                        INSTAGRAM(sessionStorage.getItem("Instagram"));
 
                     });
 
@@ -864,7 +909,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        TIKTOK("ashshakurcharity1");
+                        TIKTOK(sessionStorage.getItem("TikTok"));
 
                     });
 
@@ -878,7 +923,7 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        X("AshShakur41402");
+                        X(sessionStorage.getItem("X"));
 
                     });
 
@@ -938,9 +983,11 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTSES,()=>{
 
-                        BOTTOMNAV("","Contact US",()=>{
+                        BOTTOMNAV("","Contact US",(ELSE)=>{
 
-                            
+                            CONTACTUSVIEW(ELSE,ASCODATABASELINK,"","ASCOA",()=>{
+
+                            });
                             
                         });
 
@@ -1020,10 +1067,14 @@ const MOBILEVIEW=()=>{
 
             BREAK(ELEMENTS);
 
-            TEXTVIEW(ELEMENTS,COPYRIGHT+"ASCOA 2026",()=>{
+            YEAR((Time)=>{
+
+                TEXTVIEW(ELEMENTS,COPYRIGHT+"ASCOA "+Time,()=>{
+
+                });
 
             });
-            
+
             BREAK(ELEMENTS);
 
         });
@@ -1052,7 +1103,7 @@ const MOBILEVIEW=()=>{
 
         CLICK(ELEMENTS,()=>{
 
-            WHATSAPP("+256789467876");
+            WHATSAPP(sessionStorage.getItem("WhatsApp"));
 
         });
 
@@ -1307,7 +1358,7 @@ const SUBJECTSECTION=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        WEBSITE("https://www.facebook.com/share/188Uyj5rGJ/");
+                        WEBSITE(sessionStorage.getItem("Facebook"));
 
                     });
 
@@ -1321,7 +1372,7 @@ const SUBJECTSECTION=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        INSTAGRAM("ash_shakur_charity_");
+                        INSTAGRAM(sessionStorage.getItem("Instagram"));
 
                     });
 
@@ -1335,7 +1386,7 @@ const SUBJECTSECTION=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        TIKTOK("ashshakurcharity1");
+                        TIKTOK(sessionStorage.getItem("TikTok"));
 
                     });
 
@@ -1349,7 +1400,7 @@ const SUBJECTSECTION=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        X("AshShakur41402");
+                        X(sessionStorage.getItem("X"));
 
                     });
 
@@ -1357,7 +1408,11 @@ const SUBJECTSECTION=()=>{
 
             });
 
-            TEXTVIEW(ELEMENTS,COPYRIGHT+"ASCOA 2026",()=>{
+            YEAR((Time)=>{
+
+                TEXTVIEW(ELEMENTS,COPYRIGHT+"ASCOA "+Time,()=>{
+
+                });
 
             });
 
@@ -1385,7 +1440,7 @@ const SUBJECTSECTION=()=>{
 
         CLICK(ELEMENTS,()=>{
 
-            WHATSAPP("+256789467876");
+            WHATSAPP(sessionStorage.getItem("WhatsApp"));
 
         });
 
