@@ -1,4 +1,4 @@
-const CCNTACTUSVIEW = (ELEMENT,LINK)=>{
+const CONTACTUSVIEW = (ELEMENT,LINK)=>{
 
     SWITCHER("800px",()=>{
 
@@ -88,26 +88,7 @@ const CCNTACTUSVIEW = (ELEMENT,LINK)=>{
 
             INLINEVIEW(ELEMENTS,"","100px",TRANSPARENT,"",(ELSE)=>{
 
-                ICONVIEW(ELSE,COLOREDINSTAGRAM,COLOREDINSTAGRAM,(ELEMENTSS)=>{
-
-                    WIDTH(ELEMENTSS,"100xp");
-                    HEIGHT(ELEMENTSS,"100xp");
-
-                });
-
-                ICONVIEW(ELSE,WHITEGMAILICON,WHITEGMAILICON,(ELEMENTSS)=>{
-
-                    WIDTH(ELEMENTSS,"100xp");
-                    HEIGHT(ELEMENTSS,"100xp");
-
-                });
-
-                ICONVIEW(ELSE,WHITEWHATSAPPICON,BLACKWHATSAPPICON,(ELEMENTSS)=>{
-
-                    WIDTH(ELEMENTSS,"100xp");
-                    HEIGHT(ELEMENTSS,"100xp");
-
-                });
+                CALLBACK(ELSE);
 
             });
 

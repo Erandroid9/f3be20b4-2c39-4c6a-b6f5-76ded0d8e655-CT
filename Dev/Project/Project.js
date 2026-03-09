@@ -1,22 +1,27 @@
 ERANDES=()=>{
 
-    const LinkData=[{
-        "Name":"FaceBook",
-        "Link":"Hello"
-    },{
-        "Name":"TikTok",
-        "Link":"Hello"
-    }];
+    CONTACTUSVIEW("","",(ELSE)=>{
 
-    LINKSTORAGE(LinkData);
+        ICONVIEW(ELSE,COLOREDINSTAGRAM,COLOREDINSTAGRAM,(ELEMENTSS)=>{
 
-};
+            WIDTH(ELEMENTSS,"100xp");
+            HEIGHT(ELEMENTSS,"100xp");
 
-const LINKSTORAGE=(DATA)=>{
+        });
 
-    REDUX(DATA,(Element)=>{
+        ICONVIEW(ELSE,WHITEGMAILICON,WHITEGMAILICON,(ELEMENTSS)=>{
 
-        DATASTORE("",Element.Name,Element.Link);
+            WIDTH(ELEMENTSS,"100xp");
+            HEIGHT(ELEMENTSS,"100xp");
+
+        });
+
+        ICONVIEW(ELSE,WHITEWHATSAPPICON,BLACKWHATSAPPICON,(ELEMENTSS)=>{
+
+            WIDTH(ELEMENTSS,"100xp");
+            HEIGHT(ELEMENTSS,"100xp");
+
+        });
 
     });
 
