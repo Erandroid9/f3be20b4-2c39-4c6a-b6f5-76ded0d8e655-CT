@@ -1,5 +1,50 @@
 const ERANDES=()=>{
 
+    const LinkData = [
+        {"Name":"Facebook","Link":""},
+        {"Name":"Instagram","Link":""},
+        {"Name":"TikTok","Link":""},
+        {"Name":"Twitter","Link":""},
+        {"Name":"X","Link":""},
+        {"Name":"YouTube","Link":""},
+        {"Name":"LinkedIn","Link":""},
+        {"Name":"WhatsApp","Link":"+256768058124"},
+        {"Name":"Telegram","Link":""},
+        {"Name":"Snapchat","Link":""},
+        {"Name":"Pinterest","Link":""},
+        {"Name":"Reddit","Link":""},
+        {"Name":"Discord","Link":""},
+        {"Name":"Threads","Link":""},
+        {"Name":"Tumblr","Link":""},
+        {"Name":"Quora","Link":""},
+        {"Name":"Twitch","Link":""},
+        {"Name":"Vimeo","Link":""},
+        {"Name":"Dailymotion","Link":""},
+        {"Name":"Medium","Link":""},
+        {"Name":"Blogger","Link":""},
+        {"Name":"WordPress","Link":""},
+        {"Name":"SoundCloud","Link":""},
+        {"Name":"Spotify","Link":""},
+        {"Name":"Bandcamp","Link":""},
+        {"Name":"Flickr","Link":""},
+        {"Name":"Behance","Link":""},
+        {"Name":"Dribbble","Link":""},
+        {"Name":"GitHub","Link":""},
+        {"Name":"GitLab","Link":""},
+        {"Name":"StackOverflow","Link":""},
+        {"Name":"WeChat","Link":""},
+        {"Name":"Line","Link":""},
+        {"Name":"Signal","Link":""},
+        {"Name":"KakaoTalk","Link":""},
+        {"Name":"Clubhouse","Link":""},
+        {"Name":"Mastodon","Link":""},
+        {"Name":"Rumble","Link":""},
+        {"Name":"Kick","Link":""},
+        {"Name":"Substack","Link":""}
+    ];
+
+    LINKSTORAGE(LinkData);
+
     VIEWCONTROLLER();
 
 };
@@ -841,120 +886,9 @@ const MOBILECONTACTUS=()=>{
 
     },(ELEMENT)=>{
 
-        BREAK(ELEMENT);
-
-        TEXTVIEW(ELEMENT,"Fill The Form Below",()=>{
+        CONTACTUSVIEW(ELEMENT,ERANDIXMAINLINK,"","Erandix",()=>{
 
         });
-
-        BREAK(ELEMENT);
-
-        ROUNDINPUTVIEW(ELEMENT,"text","Enter Your Name","Name",()=>{
-
-        });
-
-        BREAK(ELEMENT);
-
-        ROUNDINPUTVIEW(ELEMENT,"email","Enter Your Email","Email",()=>{
-
-        });
-
-        BREAK(ELEMENT);
-
-        ROUNDINPUTVIEW(ELEMENT,"","Subject Of Message","Subject",()=>{
-
-        });
-
-        BREAK(ELEMENT);
-
-        ROUNDTEXTAREAVIEW(ELEMENT,"Enter Your Message","Message",()=>{
-
-        });
-
-        BREAK(ELEMENT);
-
-        BUTTON(ELEMENT,"Submit",FORESTGREEN,(ELSEE)=>{
-
-            CLICK(ELSEE,()=>{
-
-                TOASTCONDITION(sessionStorage.getItem("Name"),"Enter Your Name",()=>{
-
-                    TOASTCONDITION(sessionStorage.getItem("Email"),"Enter Your Email",()=>{
-
-                        TOASTCONDITION(sessionStorage.getItem("Subject"),"Enter Your Subject",()=>{
-
-                            TOASTCONDITION(sessionStorage.getItem("Message"),"Compose The Message",()=>{
-
-                                TOASTVIEW("Please Wait");
-
-                            });    
-    
-                        });    
-
-                    });
-
-                });
-
-            });
-
-        });
-
-        BREAK(ELEMENT);
-
-        BREAK(ELEMENT);
-
-        BREAK(ELEMENT);
-
-        LINE(ELEMENT);
-
-        BREAK(ELEMENT);
-
-        TEXTVIEW(ELEMENT,"OR",()=>{
-
-        });
-
-        BREAK(ELEMENT);
-
-        LINE(ELEMENT);
-
-        BREAK(ELEMENT);
-
-        INLINEVIEW(ELEMENT,"","100px",TRANSPARENT,"",(ELSE)=>{
-
-            ICONVIEW(ELSE,COLOREDINSTAGRAM,COLOREDINSTAGRAM,(ELEMENTSS)=>{
-
-                WIDTH(ELEMENTSS,"100xp");
-                HEIGHT(ELEMENTSS,"100xp");
-
-            });
-
-            ICONVIEW(ELSE,WHITEGMAILICON,WHITEGMAILICON,(ELEMENTSS)=>{
-
-                WIDTH(ELEMENTSS,"100xp");
-                HEIGHT(ELEMENTSS,"100xp");
-
-            });
-
-            ICONVIEW(ELSE,WHITEWHATSAPPICON,BLACKWHATSAPPICON,(ELEMENTSS)=>{
-
-                WIDTH(ELEMENTSS,"100xp");
-                HEIGHT(ELEMENTSS,"100xp");
-
-            });
-
-        });
-
-        BREAK(ELEMENT);
-
-        BREAK(ELEMENT);
-
-        TEXTVIEW(ELEMENT,COPYRIGHT+"ERANDIX 2026",()=>{
-
-        });
-
-        BREAK(ELEMENT);
-
-        BREAK(ELEMENT);
 
     });
 
