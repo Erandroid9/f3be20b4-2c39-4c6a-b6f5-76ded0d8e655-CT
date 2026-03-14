@@ -871,7 +871,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELSSS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/MasjidDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
