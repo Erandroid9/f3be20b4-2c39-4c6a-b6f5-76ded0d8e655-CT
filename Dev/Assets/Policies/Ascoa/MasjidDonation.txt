@@ -19,3 +19,8 @@
 <h1>Donation Accounts</h1>
 
 <p>Below Are Our Donation Account Details For Those Interested</p>
+
+<div class="InlineView">
+    <h2 class="auto" >Account Number</h2>
+    <p class="auto"  > 101</p>
+</div>
