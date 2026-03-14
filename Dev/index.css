@@ -36,3 +36,14 @@ li{
 .red{
     color: red;
 }
+
+.InlineView{
+    width: 100%;
+    display: inline-flex;
+    margin: auto;
+    color: forestgreen;
+}
+
+.auto{
+    margin: auto;
+}
