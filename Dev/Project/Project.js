@@ -84,7 +84,13 @@ const MOBILEVIEW=()=>{
 
             CLICK(ELEMENTS,()=>{
 
-                BOTTOMNAV("","Donation",()=>{
+                BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                    SERVERASSETS("Policies/Ascoa/GeneralDonation.txt",(data)=>{
+
+                        DISPLAY(ELIMS,data);
+
+                    });
                             
                 });
 
@@ -158,9 +164,7 @@ const MOBILEVIEW=()=>{
 
                             BOTTOMNAV("","Complaints",(ELIMS)=>{
 
-                                SERVERASSETS("Policies/Ascoa/Complain.txt",(data)=>{
-
-                                    DISPLAY(ELIMS,data);
+                                COMPLAINTSVIEW(ELIMS,ASCODATABASELINK,"","ASCOA",()=>{
 
                                 });
                             
@@ -182,9 +186,7 @@ const MOBILEVIEW=()=>{
 
                             BOTTOMNAV("","Tech Support",(ELIMS)=>{
 
-                                SERVERASSETS("Policies/Ascoa/Tech.txt",(data)=>{
-
-                                    DISPLAY(ELIMS,data);
+                                TECHSUPPORTVIEW(ELIMS,ERANDIXMAINLINK,"","Erandix",()=>{
 
                                 });
                             
@@ -232,8 +234,6 @@ const MOBILEVIEW=()=>{
             LOADERVIEW(ELEMENTS,(LOAD)=>{
 
                 GETSAVEDINDEX("Catergory",(Data)=>{
-
-                    console.log(Data)
 
                     DISPLAYHIDDEN(LOAD);
 
@@ -348,7 +348,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/RamdanDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
@@ -435,7 +441,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/FoodPackDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
@@ -522,7 +534,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/ZakatDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
@@ -609,7 +627,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELEMENTS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/RamdanDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
@@ -696,7 +720,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELSSS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/WaterWellDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
@@ -783,7 +813,13 @@ const MOBILEVIEW=()=>{
 
                     CLICK(ELSSS,()=>{
 
-                        BOTTOMNAV("","Donation",()=>{
+                        BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                            SERVERASSETS("Policies/Ascoa/QuranDonation.txt",(data)=>{
+
+                                DISPLAY(ELIMS,data);
+
+                            });
                             
                         });
 
@@ -999,13 +1035,11 @@ const MOBILEVIEW=()=>{
 
                 RADIUS(ELEMENTIS,"5px");
 
-                TEXTVIEW(ELEMENTIS,"App Mode",(ELEMENTSES)=>{
+                MODETEXT(ELEMENTIS,(ELIMS)=>{
 
-                    MARGINTOP(ELEMENTSES,"2%");
+                    MARGINTOP(ELIMS,"2%");
 
-                    FONTSIZE(ELEMENTSES,"15px");
-
-                    CHANGEMODE(ELEMENTSES);
+                    FONTSIZE(ELIMS,"15px");
 
                 });
 
@@ -1222,7 +1256,13 @@ const SUBJECTSECTION=()=>{
 
             CLICK(ELEMENTS,()=>{
 
-                BOTTOMNAV("","Donation",()=>{
+                BOTTOMNAV("","Donation",(ELIMS)=>{
+
+                    SERVERASSETS("Policies/Ascoa/GeneralDonation.txt",(data)=>{
+
+                        DISPLAY(ELIMS,data);
+
+                    });
                             
                 });
 

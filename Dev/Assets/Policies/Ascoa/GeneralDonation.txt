@@ -1,0 +1,53 @@
+<h1>DONATION </h1>
+<P>For Those Interested in donating to help grow the Islamic Religion Through the Masjid Construction.</P>
+<h2>Donation Information</h1>
+<div class="InlineView">
+    <h2 class="auto" >Small Masjid Construction</h2>
+    <p class="auto"  >10000€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Medium Masjid Construction</h2>
+    <p class="auto"  >15000€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Big Masjid Construction</h2>
+    <p class="auto"  >20000€</p>
+</div>
+
+<h1>Donation Accounts</h1>
+
+<p>Below Are Our Donation Account Details For Those Interested</p>
+
+<h1 class="Orange">Bank Of AFrica</h1>
+
+<h3> ASH SHAKUR CHARITY AND ORPHANAGE AID ORGANISATION </h3>
+
+<div class="InlineView">
+    <h2 class="auto" >03898300007 </h2>
+    <p class="auto" >SWIFT CODE : AFRIKA</p>
+</div>
+
+<h1 class="Orange">For Western Union</h1>
+
+<div class="InlineView">
+    <h2 class="auto" >Isiko Ibrahim</h2>
+    <p class="auto"  >+256789467876</p>
+</div>
+
+<h1 class="Orange">For Money Gram</h1>
+
+<div class="InlineView">
+    <h2 class="auto" >Isiko Ibrahim</h2>
+    <p class="auto"  >+256789467876</p>
+</div>
+
+<h1 class="Orange">For Remitly Transfer</h1>
+
+<div class="InlineView">
+    <h2 class="auto" >Isiko Ibrahim</h2>
+    <p class="auto"  >+256789467876</p>
+</div>
+
+<br><br>
