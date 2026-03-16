@@ -8,7 +8,7 @@
 
 <div class="InlineView">
     <h2 class="auto" >Medium Masjid Construction</h2>
-    <p class="auto"  >15000€</p>
+    <p class="auto"  >15000€ </p>
 </div>
 
 <div class="InlineView">
