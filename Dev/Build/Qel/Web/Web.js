@@ -373,16 +373,16 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                                 TOP(LOADSER,"50%");
 
-                                QELPAY(Number(sessionStorage.getItem("Amount")),Data.ProductName,"",(DataLink)=>{
+                                QELPAY(sessionStorage.getItem("Amount"),sessionStorage.getItem("UserEmail"),(DataLink)=>{
 
                                     IFRAME(ELSESS,DataLink,()=>{
 
                                         DISPLAYHIDDEN(LOADSER);
 
                                     });
-
+                                    
                                 });
-                                
+
                             });
 
                         });
