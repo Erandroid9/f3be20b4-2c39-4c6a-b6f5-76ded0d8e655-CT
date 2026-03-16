@@ -1,19 +1,19 @@
 <h1>WATER WELL DONATION </h1>
-<P>For Those Interested in donating to help grow the Islamic Religion Through the Masjid Construction.</P>
+<P>For Those Interested in donating to help grow the Islamic Religion Through the Water Well Construction.</P>
 <h2>Donation Information</h1>
 <div class="InlineView">
-    <h2 class="auto" >Small Masjid Construction</h2>
-    <p class="auto"  >10000€</p>
+    <h2 class="auto" > Shaduof Construction</h2>
+    <p class="auto"  >600€</p>
 </div>
 
 <div class="InlineView">
-    <h2 class="auto" >Medium Masjid Construction</h2>
-    <p class="auto"  >15000€</p>
+    <h2 class="auto" >Borehole </h2>
+    <p class="auto"  >950€</p>
 </div>
 
 <div class="InlineView">
-    <h2 class="auto" >Big Masjid Construction</h2>
-    <p class="auto"  >20000€</p>
+    <h2 class="auto" >Tailed borehole</h2>
+    <p class="auto"  >1200€</p>
 </div>
 
 <h1>Donation Accounts</h1>

@@ -1,5 +1,5 @@
 <h1>ZAKAT DONATION </h1>
-<P>For Those Interested in donating to help grow the Islamic Religion Through the Masjid Construction.</P>
+<P>For Those Interested in donating to help grow the Islamic Religion Through Zakat Offering.</P>
 <h2>Donation Information</h1>
 <div class="InlineView">
     <h2 class="auto" >Small Masjid Construction</h2>

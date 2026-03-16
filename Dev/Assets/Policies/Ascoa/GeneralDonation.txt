@@ -1,6 +1,12 @@
 <h1>DONATION </h1>
-<P>For Those Interested in donating to help grow the Islamic Religion Through the Masjid Construction.</P>
-<h2>Donation Information</h1>
+<P>For Those Interested in donating to help grow the Islamic Religion Through the Following Progams.</P>
+<h2>Donation Programs Information</h1>
+
+<div class="InlineView">
+    <h2 class="auto" >Quran distribution for madarasa</h2>
+    <p class="auto"  >5€ one piece</p>
+</div>
+
 <div class="InlineView">
     <h2 class="auto" >Small Masjid Construction</h2>
     <p class="auto"  >10000€</p>
@@ -14,6 +20,61 @@
 <div class="InlineView">
     <h2 class="auto" >Big Masjid Construction</h2>
     <p class="auto"  >20000€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Sheep Qurban</h2>
+    <p class="auto"  >85€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Goat Qurban</h2>
+    <p class="auto"  >75€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Cattle  Qurban</h2>
+    <p class="auto"  >400€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Camel  Qurban</h2>
+    <p class="auto"  >900€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >100 People Food Pack</h2>
+    <p class="auto"  >200€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >200 People Food Pack</h2>
+    <p class="auto"  >400€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >500 People Food Pack </h2>
+    <p class="auto"  >1000€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Hot Meals </h2>
+    <p class="auto"  >1200€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Orphan Feeding </h2>
+    <p class="auto"  >2000€</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Single Food Pack </h2>
+    <p class="auto"  >2€ a plate</p>
+</div>
+
+<div class="InlineView">
+    <h2 class="auto" >Needy Family Food Pack </h2>
+    <p class="auto"  >40€ a plate</p>
 </div>
 
 <h1>Donation Accounts</h1>
