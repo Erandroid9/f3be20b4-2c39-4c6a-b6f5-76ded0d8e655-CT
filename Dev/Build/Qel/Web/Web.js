@@ -375,15 +375,19 @@ const MOBILEPRODUCTDETAILPAGE=()=>{
 
                                 TOP(LOADSER,"50%");
 
-                                QELPAY(sessionStorage.getItem("Amount"),sessionStorage.getItem("UserEmail"),(DataLink)=>{
+                                DEJSONDATA(" ","UserData",(MyData)=>{
 
-                                    IFRAME(ELSESS,DataLink,()=>{
-
-                                        DISPLAYHIDDEN(LOADSER);
-
+                                    QELPAY(sessionStorage.getItem("Amount"),MyData.UserEmail,(DataLink)=>{
+    
+                                        IFRAME(ELSESS,DataLink,()=>{
+    
+                                            DISPLAYHIDDEN(LOADSER);
+    
+                                        });
+                                        
                                     });
-                                    
-                                });
+
+                                })
 
                             });
 
