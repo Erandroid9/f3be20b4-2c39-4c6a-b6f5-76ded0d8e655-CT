@@ -1,5 +1,7 @@
 const ERANDES=()=>{
 
+    ACCOUNTSYNC(QELDATABASELINK);
+
     DOWNLOADSAVEINDEX(QELDATABASELINK,"Products",()=>{
 
     },()=>{

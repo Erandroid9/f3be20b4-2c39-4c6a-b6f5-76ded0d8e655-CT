@@ -1,5 +1,7 @@
 const ERANDES=()=>{
 
+    ACCOUNTSYNC(LINK);
+
     VIEWCONTROLLER();
 
 };
