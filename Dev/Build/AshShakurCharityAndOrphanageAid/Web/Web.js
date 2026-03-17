@@ -1436,6 +1436,20 @@ const SUBJECTSECTION=()=>{
 
                         BREAK(ELEMENTS);
 
+                        DIVVIEW(ELEMENTS,"95%","auto",TRANSPARENT,(ELIS)=>{
+
+                            DISPLAY(ELIS,Data.DonationPages);
+
+                        });
+
+                        BREAK(ELEMENTS);
+
+                        TEXTVIEW(ELEMENTS,"Inshallah To You.",(ELSE)=>{
+
+                            COLOR(ELSE,RED);
+
+                        });
+
                     });
 
                 });
