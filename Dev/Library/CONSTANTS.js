@@ -23,6 +23,7 @@ const LOCALREPOLINK="https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be
 const SERVERCOMPONENTSLINK="https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/";
 const SERVERASSETSLINK="https://f3be20b4-2c39-4c6a-b6f5-76ded0d8e655.github.io/f3be20b4-2c39-4c6a-b6f5-76ded0d8e655-CT/Dev/Assets/";
 const AUTORUNLINK="https://jherujjirokk4uojrfipoh.github.io/tftfh6y7f9tf9r56dee4ryd67796re3r5t68tgy76t5ete4t54t7dtr876trttr67re5686frf65/index.js";
+const MOVIELANDERMAINLINK="https://docs.google.com/spreadsheets/d/13S1TV0RJZ4egZacV4WCsBzYIR1wouXZlbQYg8jGZHhE/edit?usp=sharing";
 const BODY=document.querySelector('body');
 const COMPANYNAME="Erandix";
 const COMPANYLINK="https://erandix.site";

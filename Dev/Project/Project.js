@@ -66,7 +66,7 @@ const MOBILECATERGORYPAGE=()=>{
 
 const DESKTOPVIEW=()=>{
 
-    AUTOSTART("","Movie Lander","Policies/MovieLander/MovieLander.txt","",()=>{
+    AUTOSTART("","Movie Lander","Policies/MovieLander/MovieLander.txt",MOVIELANDERMAINLINK,()=>{
 
     });
 
