@@ -43,3 +43,5 @@ const RIGHTTEXTALIGN=(ELEMENT)=>{STYLED(ELEMENT,"text-align","right");};
 const FLEXSHRINK=(ELEMENT)=>{STYLED(ELEMENT,"flex-shrink","0");};
 const COVEROBJECTFIT=(ELEMENT)=>{STYLED(ELEMENT,"object-fit","cover");};
 const NOBORDER=(ELEMENT)=>{STYLED(ELEMENT,"border","none");};
+const NOCOVEROBJECTFIT=(ELEMENT)=>{STYLED(ELEMENT,"object-fit","none");};
+const FITCOVEROBJECTFIT=(ELEMENT)=>{STYLED(ELEMENT,"object-fit","fill");};

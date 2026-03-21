@@ -6,7 +6,7 @@ const ERANDES=()=>{
 
 const MOBILEVIEW=()=>{
 
-    AUTOSTART("","Movie Lander","Policies/MovieLander/MovieLander.txt","",()=>{
+    AUTOSTART("","Movie Lander","Policies/MovieLander/MovieLander.txt",MOVIELANDERMAINLINK,()=>{
 
         FOOTERVIEW((ELEMENT)=>{
 
@@ -40,9 +40,31 @@ const MOBILEUSERACCOUNTPAGE=()=>{
 
     LEFTHEADERVIEWBACKPAGEVIEW(MOBILEVIEW,"Profile",(ELEMENT)=>{
 
-        LOADERVIEW(ELEMENT,(LOAD)=>{
+        PROFILEPAGEVIEW(ELEMENT,"Policies/MovieLander/MovieLander.txt","",(ELEMENTS)=>{
 
-            TOP(LOAD,"50%");
+            IMAGETEXTVIEW(ELEMENTS," ",WHITESETTINGSICON,WHITESETTINGSICON,"Settings",()=>{
+
+            });
+
+            IMAGETEXTVIEW(ELEMENTS," ",WHITESETTINGSICON,WHITESETTINGSICON,"Settings",()=>{
+
+            });
+
+            IMAGETEXTVIEW(ELEMENTS," ",WHITESETTINGSICON,WHITESETTINGSICON,"Settings",()=>{
+
+            });
+
+            IMAGETEXTVIEW(ELEMENTS," ",WHITESETTINGSICON,WHITESETTINGSICON,"Settings",()=>{
+
+            });
+
+            IMAGETEXTVIEW(ELEMENTS," ",WHITESETTINGSICON,WHITESETTINGSICON,"Settings",()=>{
+
+            });
+
+            BREAK(ELEMENTS);
+
+            BREAK(ELEMENTS);
 
         });
 
